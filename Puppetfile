@@ -43,3 +43,6 @@ github "repository"
 
 github "homebrew"
 github "brewcask"
+github "chrome"
+github "iterm2"
+github "atom"
