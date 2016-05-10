@@ -37,7 +37,9 @@ github "inifile", "1.4.1", :repo => "puppetlabs/puppetlabs-inifile"
 github "sudo"
 github "git"
 github "repository"
-github "homebrew"
 
 # Core modules for a basic development environment. You can replace
 # some/most of these if you want, but it's not recommended.
+
+github "homebrew"
+github "brewcask"
