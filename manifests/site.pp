@@ -4,6 +4,7 @@ require chadrien::python
 require chadrien::ruby
 require chadrien::apps
 require chadrien::shell
+require chadrien::git
 
 node default {
   include git
