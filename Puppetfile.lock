@@ -34,6 +34,11 @@ GITHUBTARBALL
     iterm2 (1.2.5)
 
 GITHUBTARBALL
+  remote: boxen/puppet-osx
+  specs:
+    osx (2.8.0)
+
+GITHUBTARBALL
   remote: boxen/puppet-repository
   specs:
     repository (2.4.1)
@@ -42,6 +47,11 @@ GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
+
+GITHUBTARBALL
+  remote: boxen/puppet-zsh
+  specs:
+    zsh (1.0.0)
 
 GITHUBTARBALL
   remote: puppetlabs/puppetlabs-inifile
@@ -68,7 +78,9 @@ DEPENDENCIES
   inifile (= 1.4.1)
   iterm2 (>= 0)
   module_data (= 0.0.4)
+  osx (>= 0)
   repository (>= 0)
   stdlib (= 4.7.0)
   sudo (>= 0)
+  zsh (>= 0)
 
