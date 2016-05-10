@@ -1,0 +1,14 @@
+/.bundle
+/.librarian
+/.projects
+/.snapshot
+/.tmp
+/bin
+/config/local.rb
+/log
+/tmp
+/shared/*
+!/shared/README.md
+/vendor/gems/
+/vendor/cache/
+/vendor/puppet/cache/
