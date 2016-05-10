@@ -13,4 +13,9 @@ class chadrien::shell {
     'tmux':;
     'tree':;
   }
+
+  ruby_gem {
+    'bropages':;
+    'tmuxinator':;
+  }
 }
