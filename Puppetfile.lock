@@ -44,6 +44,11 @@ GITHUBTARBALL
     repository (2.4.1)
 
 GITHUBTARBALL
+  remote: boxen/puppet-ruby
+  specs:
+    ruby (8.5.5)
+
+GITHUBTARBALL
   remote: boxen/puppet-sudo
   specs:
     sudo (1.0.0)
@@ -80,6 +85,7 @@ DEPENDENCIES
   module_data (= 0.0.4)
   osx (>= 0)
   repository (>= 0)
+  ruby (>= 0)
   stdlib (= 4.7.0)
   sudo (>= 0)
   zsh (>= 0)
