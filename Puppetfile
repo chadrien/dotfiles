@@ -50,5 +50,6 @@ github "osx"
 github "zsh"
 github "openssl"
 github "ruby"
+github "hub"
 
 eval File.open('./Puppetfile.local', 'r').read if File.exist? './Puppetfile.local'

@@ -1,5 +1,6 @@
 class chadrien::git {
   include git
+  include hub
   package { 'tig': }
 
   git::config::global { 'alias.st':
