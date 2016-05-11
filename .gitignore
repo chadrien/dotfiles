@@ -12,3 +12,4 @@
 /vendor/gems/
 /vendor/cache/
 /vendor/puppet/cache/
+/modules/people/manifests/
