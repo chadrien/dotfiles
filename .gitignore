@@ -13,3 +13,5 @@
 /vendor/cache/
 /vendor/puppet/cache/
 /modules/people/manifests/
+/Puppetfile.local
+/Puppetfile.lock
