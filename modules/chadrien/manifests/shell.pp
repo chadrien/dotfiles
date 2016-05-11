@@ -18,4 +18,9 @@ class chadrien::shell {
     'bropages': gem => 'bropages', ruby_version => '2.3.0';
     'tmuxinator': gem => 'bropages', ruby_version => '2.3.0';
   }
+
+  file { "/Users/${::boxen_user}/.zshrc":
+    ensure => file,
+    content => template('chadrien/zshrc.erb')
+  }
 }
