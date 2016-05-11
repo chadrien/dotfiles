@@ -1,3 +1,5 @@
+[ -f <%= scope.lookupvar "boxen::config::home" %>/env.sh ] && source <%= scope.lookupvar "boxen::config::home" %>/env.sh
+
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="agnoster"
@@ -13,5 +15,3 @@ source $ZSH/oh-my-zsh.sh
 
 export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
-
-[ -f <%= scope.lookupvar "boxen::config::home" %>/env.sh ] && source <%= scope.lookupvar "boxen::config::home" %>/env.sh
