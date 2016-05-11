@@ -12,6 +12,8 @@
 /vendor/gems/
 /vendor/cache/
 /vendor/puppet/cache/
+/vendor/puppet/source/
 /modules/people/manifests/
+/modules/projects/manifests/
 /Puppetfile.local
 /Puppetfile.lock
