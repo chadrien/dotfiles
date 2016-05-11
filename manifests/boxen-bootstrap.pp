@@ -45,4 +45,13 @@ Repository {
 
 Homebrew::Formula <| |> -> Package <| |>
 
-class boxen::bootstrap {}
+class boxen::bootstrap {
+  sudoers { 'installer':
+    users    => $::boxen_user,
+    hosts    => 'ALL',
+    commands => [
+      '(ALL) SETENV:NOPASSWD: /usr/bin/sqlite3',
+    ],
+    type     => 'user_spec',
+  }
+}

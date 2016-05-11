@@ -17,7 +17,7 @@ class chadrien::apps {
   }
 
   package {
-    'amethyst': provider => brewcask, root => true;
+    'amethyst': provider => brewcask, require => [ Homebrew::Tap['caskroom/cask'], Sudoers['installer'] ];
     'dash': provider => brewcask;
     'google-chrome': provider => brewcask;
     'intellij-idea': provider => brewcask;
