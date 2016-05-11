@@ -1,1 +1,2 @@
 ---
+git::configdir: "%{::boxen::config::configdir}/git"

@@ -3,6 +3,12 @@ class chadrien::git {
   include hub
   package { 'tig': }
 
+  $configdir = hiera('git::configdir')
+
+  File<|title == "${configdir}/gitignore"|> {
+    source  => 'puppet:///modules/chadrien/gitignore'
+  }
+
   git::config::global { 'alias.st':
     value  => 'status -sb'
   }
