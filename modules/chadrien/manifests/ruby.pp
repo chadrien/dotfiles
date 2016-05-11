@@ -1,16 +1,12 @@
 include homebrew
 
-define ruby_gem {
-  exec { "install gem ${name}":
-    command => "gem install ${name}",
-    unless => "gem install ${name}"
-  }
-}
-
 class chadrien::ruby {
-  package { 'ruby':
-    ensure => present
+  class { 'ruby::global':
+    version => '2.3.0'
   }
 
-  ruby_gem { 'bundler':; }
+  ruby_gem { 'bundler':
+    gem => 'bundler',
+    ruby_version => '2.3.0'
+  }
 }

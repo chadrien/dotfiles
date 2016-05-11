@@ -15,7 +15,7 @@ class chadrien::shell {
   }
 
   ruby_gem {
-    'bropages':;
-    'tmuxinator':;
+    'bropages': gem => 'bropages', ruby_version => '2.3.0';
+    'tmuxinator': gem => 'bropages', ruby_version => '2.3.0';
   }
 }
