@@ -16,8 +16,10 @@ class chadrien::apps {
     'atom-material-syntax':;
   }
 
-  package { 'amethyst': provider => 'brewcask' }
-  package { 'dash': provider => 'brewcask' }
-  package { 'google-chrome': provider => 'brewcask' }
-  package { 'intellij-idea': provider => 'brewcask' }
+  package {
+    'amethyst': provider => brewcask, root => true;
+    'dash': provider => brewcask;
+    'google-chrome': provider => brewcask;
+    'intellij-idea': provider => brewcask;
+  }
 }
