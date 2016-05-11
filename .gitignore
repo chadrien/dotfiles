@@ -14,6 +14,7 @@
 /vendor/puppet/cache/
 /vendor/puppet/source/
 /modules/people/manifests/
+/hiera/users/
 /modules/projects/manifests/
 /Puppetfile.local
 /Puppetfile.lock
