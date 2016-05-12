@@ -1,2 +1,8 @@
+.DS_Store
+
+.env
+.node-version
+.php-version
+
 /.idea
 /*.iml
