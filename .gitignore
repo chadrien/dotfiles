@@ -13,8 +13,8 @@
 /vendor/cache/
 /vendor/puppet/cache/
 /vendor/puppet/source/
-/modules/people/manifests/
+/modules/people/
 /hiera/users/
-/modules/projects/manifests/
+/modules/projects/
 /Puppetfile.local
 /Puppetfile.lock
