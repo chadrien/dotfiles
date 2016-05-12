@@ -7,6 +7,7 @@ class chadrien::shell {
 
   package {
     'ack':;
+    'autoenv':;
     'gnu-sed': install_options => ['--with-default-names'];
     'httpie':;
     'thefuck':;
@@ -22,5 +23,10 @@ class chadrien::shell {
   file { "/Users/${::boxen_user}/.zshrc":
     ensure => file,
     content => template('chadrien/zshrc.erb')
+  }
+
+  boxen::env_script { 'autoenv':
+    content  => template('chadrien/autoenv.sh.erb'),
+    priority => highest,
   }
 }
