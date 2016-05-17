@@ -29,4 +29,9 @@ class chadrien::shell {
     content  => template('chadrien/autoenv.sh.erb'),
     priority => highest,
   }
+
+  boxen::env_script { 'aliases':
+    content  => template('chadrien/aliases.sh.erb'),
+    priority => highest,
+  }
 }
