@@ -33,7 +33,7 @@ class chadrien::git {
     value  => 'checkout'
   }
   git::config::global { 'alias.go':
-    value  => '!f() { [ -z $1 ] && echo "Usage: git go <branch>" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f'
+    value  => '"!f() { [ -z $1 ] && echo \"Usage: git go <branch>\" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f"'
   }
   git::config::global { 'alias.br':
     value  => 'branch -v'
