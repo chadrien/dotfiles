@@ -3,6 +3,11 @@ class chadrien::git {
   include hub
   package { 'tig': }
 
+  ruby_gem { 'git-up':
+    gem => 'git-up',
+    ruby_version => '2.3.0'
+  }
+
   $configdir = hiera('git::configdir')
 
   File<|title == "${configdir}/gitignore"|> {
