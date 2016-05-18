@@ -62,4 +62,7 @@ class chadrien::git {
   git::config::global { 'alias.unadd':
     value  => 'reset HEAD --'
   }
+  git::config::global { 'alias.brcl':
+    value  => '!git fetch --all && git branch -v | awk \'{print $1}\' | grep -v \'*\' | xargs -I {} git branch -d {} >/dev/null 2>&1'
+  }
 }
