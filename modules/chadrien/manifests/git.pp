@@ -27,7 +27,7 @@ class chadrien::git {
     value  => "log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
   }
   git::config::global { 'alias.ci':
-    value  => 'commit'
+    value  => 'commit -S'
   }
   git::config::global { 'alias.cp':
     value  => 'cherry-pick -ex'
