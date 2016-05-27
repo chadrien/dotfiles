@@ -1,7 +1,10 @@
 class chadrien::git {
   include git
   include hub
-  package { 'tig': }
+  package {
+    'tig':;
+    'gpg':;
+  }
 
   ruby_gem { 'git-up':
     gem => 'git-up',
