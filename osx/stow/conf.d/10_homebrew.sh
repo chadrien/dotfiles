@@ -1,0 +1,1 @@
+export PATH=$HOMEBREW_ROOT/bin:$PATH
