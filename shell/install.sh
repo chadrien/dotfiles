@@ -7,4 +7,4 @@ if [ "$TEST_CURRENT_SHELL" != "zsh" ]; then
   sudo chsh -s $HOMEBREW_ROOT/bin/zsh chadrien
 fi
 
-(cd $DOTFILES_ROOT/shell && stow -t $HOME stow)
+(cd $DOTFILES_ROOT/shell/stow && stow -t $HOME home && stow -t $CONFIG_DIR conf.d)
