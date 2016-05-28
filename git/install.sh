@@ -5,3 +5,5 @@ if [ "`uname`" = 'Darwin' ]; then
   [ ! -d "`brew --prefix gnupg`" ] && brew install gnupg
   [ ! -d "`brew --prefix hub`" ] && brew install hub
 fi
+
+(cd $DOTFILES_ROOT/git && stow -t $CONFIG_DIR stow)
