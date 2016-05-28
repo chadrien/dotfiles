@@ -6,7 +6,7 @@
   st = status -sb
   purr = pull --rebase
   lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-  ci = commit -snip
+  ci = commit -S
   cp = cherry-pick -ex
   co = checkout
   go = "!f() { [ -z $1 ] && echo \"Usage: git go <branch>\" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f"
