@@ -9,7 +9,7 @@ export DOTFILES_ROOT=`dirname $0`
 [ ! -d '/usr/local/bin' ] && sudo mkdir -p /usr/local/bin && sudo chown `whoami`:staff /usr/local/bin
 
 source $DOTFILES_ROOT/config/stow/env.sh
-source $DOTFILES_ROOT/osx/homebrew.sh
+source $DOTFILES_ROOT/osx/install.sh
 source $DOTFILES_ROOT/config/init.sh
 
 for file in `find $DOTFILES_ROOT -name '*.sh' -depth 2 -type f ! -path "$DOTFILES_ROOT/.git/*" ! -path "$DOTFILES_ROOT/config/*" ! -path "$DOTFILES_ROOT/osx/*"`; do
