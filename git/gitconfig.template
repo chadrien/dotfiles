@@ -1,3 +1,6 @@
+[core]
+	excludesfile = ~/.gitignore_global
+
 [user]
   name = USERNAME
   email = EMAIL
