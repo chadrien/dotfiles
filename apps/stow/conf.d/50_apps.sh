@@ -1,3 +1,3 @@
 #!/bin/bash
 
-export EDITOR=atom
+export EDITOR="atom --wait"
