@@ -2,7 +2,7 @@
 
 [ "`uname`" != 'Darwin' ] && return
 
-apps=(google-chrome amethyst alfred iterm2 atom intellij-idea dash)
+apps=(google-chrome amethyst alfred iterm2 atom intellij-idea dash sourcetree)
 for app in "${apps[@]}"; do
   ! brew cask list $app >/dev/null 2>&1 && brew cask install $app
 done
