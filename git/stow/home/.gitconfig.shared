@@ -1,9 +1,9 @@
+[hub]
+	protocol = https
+
 [core]
 	excludesfile = ~/.gitignore_global
-
-[user]
-  name = USERNAME
-  email = EMAIL
+	editor = vim
 
 [alias]
   st = status -sb
@@ -22,3 +22,15 @@
   unadd = reset HEAD --
   wip = !git add -u && git add . && git ci -m"WIP"
   unwip = !git reset --soft HEAD~ && git unadd
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
+[mergetool]
+	keepBackup = false
+
+[gpg]
+	program = gpg2
