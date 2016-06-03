@@ -3,6 +3,7 @@
 [ "`uname`" != 'Darwin' ] && return
 
 [ ! -d "`brew --prefix git`" ] && brew install git
+[ ! -d "`brew --prefix gpg`" ] && brew install gpg
 [ ! -d "`brew --prefix gpg2`" ] && brew install gpg2
 [ ! -d "`brew --prefix pinentry-mac`" ] && brew install pinentry-mac
 [ ! -d "`brew --prefix hub`" ] && brew install hub
