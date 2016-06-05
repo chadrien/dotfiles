@@ -5,7 +5,7 @@ export ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="agnoster"
 DISABLE_AUTO_TITLE="true"
 
-plugins=(git tmux z zsh-syntax-highlighting npm)
+plugins=(git tmux tmuxinator z zsh-syntax-highlighting npm)
 
 ZSH_TMUX_AUTOCONNECT="false"
 

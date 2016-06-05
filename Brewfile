@@ -17,6 +17,7 @@ brew 'ack'
 brew 'gnu-sed', args: ['with-default-names']
 brew 'thefuck'
 brew 'tree'
+brew 'reattach-to-user-namespace'
 
 cask 'google-chrome'
 cask 'amethyst'
