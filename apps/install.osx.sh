@@ -9,6 +9,8 @@ cp $DOTFILES_ROOT/files/Monaco\ for\ Powerline.otf ~/Library/Fonts
 
 # atom
 ! apm list | grep editorconfig >/dev/null && apm install editorconfig
+! apm list | grep terminal-plus >/dev/null && apm install terminal-plus
+! apm list | grep project-plus >/dev/null && apm install project-plus
 
 # amethyst
 defaults write com.amethyst.Amethyst.plist 'enables-layout-hud-on-space-change' -bool false
