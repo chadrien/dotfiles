@@ -1,4 +1,9 @@
 "*":
+  core:
+    themes: [
+      "seti-ui"
+      "one-dark-syntax"
+    ]
   editor:
     fontFamily: "Monaco for Powerline"
     fontSize: 12
