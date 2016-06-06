@@ -10,5 +10,6 @@
 ! apm list | grep ex-mode >/dev/null && apm install ex-mode
 ! apm list | grep relative-numbers >/dev/null && apm install relative-numbers
 ! apm list | grep expand-region >/dev/null && apm install expand-region
+! apm list | grep next-line-comment >/dev/null && apm install next-line-comment
 
 (cd $DOTFILES_ROOT/apps/stow && stow -t $HOME home)
