@@ -9,5 +9,6 @@
 ! apm list | grep vim-mode >/dev/null && apm install vim-mode
 ! apm list | grep ex-mode >/dev/null && apm install ex-mode
 ! apm list | grep relative-numbers >/dev/null && apm install relative-numbers
+! apm list | grep expand-region >/dev/null && apm install expand-region
 
 (cd $DOTFILES_ROOT/apps/stow && stow -t $HOME home)
