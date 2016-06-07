@@ -3,6 +3,7 @@ tap 'homebrew/services'
 
 brew 'stow'
 
+cask 'tcl'
 brew 'git'
 brew 'hub'
 brew 'gpg2'

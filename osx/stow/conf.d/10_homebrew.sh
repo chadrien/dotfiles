@@ -1,1 +1,1 @@
-export PATH=$HOMEBREW_ROOT/bin:$PATH
+export PATH=$HOMEBREW_ROOT/bin:/usr/local/bin:$PATH
