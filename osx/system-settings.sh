@@ -19,9 +19,6 @@ defaults write NSGlobalDomain NSDocumentSaveNewDocumentsToCloud -bool false
 # Disable the “Are you sure you want to open this application?” dialog
 defaults write com.apple.LaunchServices LSQuarantine -bool false
 
-# Disable Notification Center and remove the menu bar icon
-launchctl unload -w /System/Library/LaunchAgents/com.apple.notificationcenterui.plist 2> /dev/null
-
 # Trackpad: enable tap to click for this user and for the login screen
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
 defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
