@@ -10,9 +10,7 @@
     showIndentGuide: true
   "exception-reporting":
     userId: "831d458e-db16-3a96-6cba-a40a5635b5e7"
-  react:
-    enabledForAllJavascriptFiles: true
-  "terminal-plus":
+  "platformio-ide-terminal":
     ansiColors:
       normal:
         black:
@@ -96,12 +94,13 @@
           green: 104
           blue: 112
           alpha: 1
-    core: {}
     style:
       fontFamily: "Monaco for Powerline"
       fontSize: "12"
       theme: "dracula"
     toggles:
       autoClose: true
+  react:
+    enabledForAllJavascriptFiles: true
   welcome:
     showOnStartup: false
