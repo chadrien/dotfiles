@@ -22,6 +22,8 @@
   unadd = reset HEAD --
   wip = !git add -u && git add . && git ci -m"WIP"
   unwip = !git reset --soft HEAD~ && git unadd
+  mt = mergetool
+  dt = difftool
 
 [color]
 	diff = auto
