@@ -8,6 +8,5 @@
 ! apm list | grep seti-ui >/dev/null && apm install seti-ui
 ! apm list | grep expand-region >/dev/null && apm install expand-region
 ! apm list | grep next-line-comment >/dev/null && apm install next-line-comment
-! apm list | grep word-jumper >/dev/null && apm install word-jumper
 
 (cd $DOTFILES_ROOT/apps/stow && stow -t $HOME home)
