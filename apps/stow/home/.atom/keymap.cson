@@ -1,8 +1,0 @@
-'atom-text-editor':
-  'alt-up': 'expand-region:expand'
-  'alt-down': 'expand-region:shrink'
-  'alt-right': 'editor:move-to-next-subword-boundary'
-  'alt-left': 'editor:move-to-previous-subword-boundary'
-  'alt-shift-right': 'editor:select-to-next-subword-boundary'
-  'alt-shift-left': 'editor:select-to-previous-subword-boundary'
-  'ctrl-shift-`': 'platformio-ide-terminal:fullscreen'

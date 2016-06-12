@@ -1,0 +1,10 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "files.associations": {
+        ".babelrc": "json"
+    },
+    "editor.fontFamily": "Monaco for Powerline",
+    "editor.fontSize": 12,
+    "terminal.integrated.fontFamily": "Monaco for Powerline, Monaco",
+    "editor.trimAutoWhitespace": true
+}

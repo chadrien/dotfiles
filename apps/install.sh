@@ -1,12 +1,9 @@
 #!/bin/bash
 
-# atom
-! apm list | grep editorconfig >/dev/null && apm install editorconfig
-! apm list | grep platformio-ide-terminal >/dev/null && apm install platformio-ide-terminal
-! apm list | grep project-plus >/dev/null && apm install project-plus
-! apm list | grep data-atom >/dev/null && apm install data-atom
-! apm list | grep seti-ui >/dev/null && apm install seti-ui
-! apm list | grep expand-region >/dev/null && apm install expand-region
-! apm list | grep next-line-comment >/dev/null && apm install next-line-comment
+# vscode
+vscode_extensions=(EditorConfig.EditorConfig alefragnani.project-manager dbaeumer.vscode-eslint vsmobile.vscode-react-native)
+for vscode_extension in "${vscode_extensions[@]}"; do
+    code --install-extension $vscode_extension
+done
 
 (cd $DOTFILES_ROOT/apps/stow && stow -t $HOME home)
