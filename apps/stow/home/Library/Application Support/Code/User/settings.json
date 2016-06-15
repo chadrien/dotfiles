@@ -6,5 +6,6 @@
     "editor.fontFamily": "Monaco for Powerline",
     "editor.fontSize": 12,
     "terminal.integrated.fontFamily": "Monaco for Powerline, Monaco",
-    "editor.trimAutoWhitespace": true
+    "editor.trimAutoWhitespace": true,
+    "files.trimTrailingWhitespace": true
 }
