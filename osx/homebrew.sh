@@ -5,6 +5,7 @@ if [ ! -d "$HOMEBREW_ROOT" ]; then
   export PATH=$HOMEBREW_ROOT/bin:$PATH
   brew tap homebrew/bundle
   brew update
+  brew autoupdate --start --upgrade --cleanup
 fi
 
 (cd $DOTFILES_ROOT; brew bundle)

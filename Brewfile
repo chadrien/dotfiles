@@ -1,5 +1,6 @@
 tap 'caskroom/cask'
 tap 'homebrew/services'
+tap 'domt4/autoupdate'
 
 brew 'stow'
 
