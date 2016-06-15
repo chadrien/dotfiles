@@ -6,25 +6,24 @@
 	editor = vim
 
 [alias]
-  st = status -sb
-  purr = pull --rebase
-  lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
-  ci = commit -S
-  cp = cherry-pick -ex
-  co = checkout
-  go = "!f() { [ -z $1 ] && echo \"Usage: git go <branch>\" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f"
-  br = branch -v
-  bra = br -a
-  brr = br -r
-  master = co master
-  cl = clone
-  pop = stash pop
-  unadd = reset HEAD --
-  wip = !git add -u && git add . && git ci -m"WIP"
-  unwip = !git reset --soft HEAD~ && git unadd
-  mt = mergetool
-  dt = difftool
-  diff = diff --compaction-heuristic
+    st = status -sb
+    purr = pull --rebase
+    lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    ci = commit -S
+    cp = cherry-pick -ex
+    co = checkout
+    go = "!f() { [ -z $1 ] && echo \"Usage: git go <branch>\" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f"
+    br = branch -v
+    bra = br -a
+    brr = br -r
+    master = co master
+    cl = clone
+    pop = stash pop
+    unadd = reset HEAD --
+    wip = !git add -u && git add . && git ci -m"WIP"
+    unwip = !git reset --soft HEAD~ && git unadd
+    mt = mergetool
+    dt = difftool
 
 [color]
 	diff = auto
