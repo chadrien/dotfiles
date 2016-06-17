@@ -24,6 +24,7 @@
     unwip = !git reset --soft HEAD~ && git unadd
     mt = mergetool
     dt = difftool
+    ap = add -p
 
 [color]
 	diff = auto
