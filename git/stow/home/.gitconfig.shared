@@ -25,6 +25,7 @@
     mt = mergetool
     dt = difftool
     ap = add -p
+    delete-merged-branches = !git up && git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git checkout -
 
 [color]
 	diff = auto
