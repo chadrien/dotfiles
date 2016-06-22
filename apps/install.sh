@@ -2,6 +2,7 @@
 
 # vscode
 vscode_extensions=(EditorConfig.EditorConfig alefragnani.project-manager dbaeumer.vscode-eslint vsmobile.vscode-react-native ow.vscode-subword-navigation)
+vscode_extensions+=(donjayamanne.githistory deerawan.vscode-dash)
 for vscode_extension in "${vscode_extensions[@]}"; do
     code --install-extension $vscode_extension
 done
