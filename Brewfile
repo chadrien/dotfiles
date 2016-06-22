@@ -7,8 +7,6 @@ brew 'stow'
 cask 'tcl'
 brew 'git'
 brew 'hub'
-brew 'gpg2'
-brew 'pinentry-mac'
 
 brew 'node'
 brew 'npm'
