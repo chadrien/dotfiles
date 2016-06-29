@@ -8,5 +8,7 @@
     "terminal.integrated.fontFamily": "Monaco for Powerline, Monaco",
     "editor.trimAutoWhitespace": true,
     "files.trimTrailingWhitespace": true,
-    "projectManager.openInNewWindow": false
+    "projectManager.openInNewWindow": false,
+    "eslint.enable": false,
+    "tslint.enable": false
 }
