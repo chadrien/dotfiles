@@ -1,6 +1,7 @@
 tap 'caskroom/cask'
 tap 'homebrew/services'
 tap 'domt4/autoupdate'
+tap 'neovim/neovim'
 
 brew 'stow'
 
@@ -18,6 +19,10 @@ brew 'gnu-sed', args: ['with-default-names']
 brew 'thefuck'
 brew 'tree'
 brew 'reattach-to-user-namespace'
+
+brew 'neovim'
+brew 'python'
+brew 'python3'
 
 cask 'google-chrome'
 cask 'amethyst'

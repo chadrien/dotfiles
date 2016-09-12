@@ -1,6 +1,7 @@
 #!/bin/bash
 
-export EDITOR="vim"
+export EDITOR="nvim"
+alias vim="nvim"
 
 eval "$(thefuck --alias)"
 alias mux="tmuxinator"
