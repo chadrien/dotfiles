@@ -70,3 +70,5 @@ set wildignore+=*.swp,*~,._*
 
 set backupdir^=~/.config/nvim/_backup//    " where to put backup files.
 set directory^=~/.config/nvim/_temp//      " where to put swap files.
+
+set mouse=
