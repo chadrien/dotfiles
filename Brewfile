@@ -8,6 +8,7 @@ brew 'stow'
 cask 'tcl'
 brew 'git'
 brew 'hub'
+brew 'tig'
 
 brew 'node'
 brew 'npm'

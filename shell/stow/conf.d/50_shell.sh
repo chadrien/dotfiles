@@ -5,3 +5,5 @@ alias vim="nvim"
 
 eval "$(thefuck --alias)"
 alias mux="tmuxinator"
+
+alias tig="tig --all"
