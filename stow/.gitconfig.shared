@@ -1,0 +1,51 @@
+[hub]
+	protocol = https
+
+[core]
+	excludesfile = ~/.gitignore.global
+	editor = vim
+
+[alias]
+    st = status -sb
+    purr = pull --rebase
+    lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    ci = commit
+    cp = cherry-pick -ex
+    co = checkout
+    go = "!f() { [ -z $1 ] && echo \"Usage: git go <branch>\" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f"
+    br = branch -v
+    bra = br -a
+    brr = br -r
+    master = checkout master
+    cl = clone
+    pop = stash pop
+    unadd = reset HEAD --
+    wip = !git add -u && git add . && git ci -m"WIP"
+    unwip = !git reset --soft HEAD~ && git unadd
+    mt = mergetool
+    dt = difftool
+    ap = add -p
+    delete-merged-branches = !git up && git checkout master && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d && git checkout -
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
+[mergetool]
+	keepBackup = false
+
+[gpg]
+	program = gpg2
+
+[diff]
+    compactionHeuristic = true
+
+[pager]
+    log = diff-highlight | less
+    show = diff-highlight | less
+    diff = diff-highlight | less
+
+[interactive]
+    diffFilter = diff-highlight

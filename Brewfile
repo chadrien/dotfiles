@@ -1,7 +1,6 @@
 tap 'caskroom/cask'
 tap 'homebrew/services'
 tap 'domt4/autoupdate'
-tap 'neovim/neovim'
 
 brew 'stow'
 
@@ -12,6 +11,7 @@ brew 'tig'
 
 brew 'node'
 brew 'npm'
+brew 'yarn'
 
 brew 'zsh'
 brew 'tmux'
@@ -20,16 +20,14 @@ brew 'gnu-sed', args: ['with-default-names']
 brew 'thefuck'
 brew 'tree'
 brew 'reattach-to-user-namespace'
+brew 'autoenv'
 
-brew 'neovim'
-brew 'python'
-brew 'python3'
-
-cask 'google-chrome'
-cask 'amethyst'
 cask 'alfred'
-cask 'iterm2'
-cask 'visual-studio-code'
+cask 'amethyst'
 cask 'dash'
-cask 'sequel-pro'
+cask 'docker'
+cask 'font-fira-code'
+cask 'google-chrome'
+cask 'iterm2'
 cask 'kaleidoscope'
+cask 'visual-studio-code'

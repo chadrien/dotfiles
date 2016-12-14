@@ -1,0 +1,23 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    {
+        "key": "alt+left",
+        "command": "extension.moveCamelLeftCommand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "alt+right",
+        "command": "extension.moveCamelRightCommand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+left",
+        "command": "extension.extendCamelLeftCommand",
+        "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "extension.extendCamelRightCommand",
+        "when": "editorTextFocus"
+    }
+]
