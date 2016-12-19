@@ -9,3 +9,5 @@ fi
 (cd $DOTFILES_ROOT; brew bundle)
 
 brew autoupdate --start --upgrade --cleanup
+
+sudo launchctl config user path $PATH

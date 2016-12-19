@@ -1,6 +1,8 @@
 tap 'caskroom/cask'
 tap 'homebrew/services'
 tap 'domt4/autoupdate'
+tap 'koekeishiya/kwm'
+tap 'koekeishiya/khd'
 
 brew 'stow'
 
@@ -22,8 +24,10 @@ brew 'tree'
 brew 'reattach-to-user-namespace'
 brew 'autoenv'
 
+brew 'kwm', restart_service: true
+brew 'khd', restart_service: true
+
 cask 'alfred'
-cask 'amethyst'
 cask 'dash'
 cask 'docker'
 cask 'font-fira-code'
