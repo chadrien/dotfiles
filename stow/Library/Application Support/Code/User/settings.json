@@ -10,5 +10,6 @@
         "javascript": "jsx"
     },
     "typescript.check.tscVersion": false,
-    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home"
+    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home",
+    "files.trimTrailingWhitespace": true
 }

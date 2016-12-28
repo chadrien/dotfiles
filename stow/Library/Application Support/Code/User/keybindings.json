@@ -19,5 +19,9 @@
         "key": "shift+alt+right",
         "command": "extension.extendCamelRightCommand",
         "when": "editorTextFocus"
+    },
+    {
+        "key": "shift+cmd+1",
+        "command": "workbench.action.terminal.focus"
     }
 ]
