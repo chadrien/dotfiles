@@ -18,5 +18,6 @@
         "**/.hg": true,
         "**/.DS_Store": true,
         "**/.vscode": true
-    }
+    },
+    "terminal.integrated.shell.osx": "/opt/homebrew/bin/fish"
 }
