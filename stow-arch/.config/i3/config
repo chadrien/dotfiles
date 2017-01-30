@@ -8,6 +8,12 @@ exec bash ~/.screenlayout/solo.sh
 # compose key
 exec setxkbmap -option compose:ralt
 
+# mac-us keymap
+# the double call to `setxkbmap us` is a weird trick so the `§/±` key works correctly instead of being `</>` key
+exec setxkbmap us -variant mac
+exec setxkbmap -option apple:badmap
+exec setxkbmap us -variant mac
+
 # start the notification daemon
 exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon
 
