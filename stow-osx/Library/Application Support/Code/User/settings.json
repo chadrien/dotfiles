@@ -10,7 +10,6 @@
         "javascript": "jsx"
     },
     "typescript.check.tscVersion": false,
-    "java.home": "/Library/Java/JavaVirtualMachines/jdk1.8.0_102.jdk/Contents/Home",
     "files.trimTrailingWhitespace": true,
     "files.exclude": {
         "**/.git": true,
@@ -19,5 +18,6 @@
         "**/.DS_Store": true,
         "**/.vscode": true
     },
-    "terminal.integrated.shell.osx": "/opt/homebrew/bin/fish"
+    "terminal.integrated.shell.osx": "/opt/homebrew/bin/fish",
+    "window.zoomLevel": 0
 }

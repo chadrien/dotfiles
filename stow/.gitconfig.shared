@@ -1,6 +1,3 @@
-[hub]
-	protocol = https
-
 [core]
 	excludesfile = ~/.gitignore.global
 	editor = vim

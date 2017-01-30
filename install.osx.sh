@@ -20,3 +20,4 @@ for dir in $(find $DOTFILES_ROOT -type d -depth 1 -not -name 'stow' -not -name '
 done
 
 (cd $DOTFILES_ROOT; stow -t $HOME stow)
+(cd $DOTFILES_ROOT; stow -t $HOME stow-osx)
