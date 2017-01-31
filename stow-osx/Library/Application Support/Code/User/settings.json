@@ -19,5 +19,6 @@
         "**/.vscode": true
     },
     "terminal.integrated.shell.osx": "/opt/homebrew/bin/fish",
-    "window.zoomLevel": 0
+    "window.zoomLevel": 0,
+    "vim.useCtrlKeys": true
 }
