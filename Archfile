@@ -21,6 +21,7 @@ ruby-git-up
 # sound
 alsa-utils
 pavucontrol
+pnmixer
 pulseaudio
 pulseaudio-alsa
 pulseaudio-bluetooth
