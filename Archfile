@@ -1,0 +1,88 @@
+# dotfiles requirement
+stow
+
+# cli utils
+ack
+fish
+httpie
+thefuck
+
+# tmux
+tmux
+tmuxinator
+
+# git
+git
+hub-git
+meld
+openssh
+ruby-git-up
+
+# sound
+alsa-utils
+pavucontrol
+pulseaudio
+pulseaudio-alsa
+pulseaudio-bluetooth
+
+# display
+arandr
+
+# dm
+sddm
+archlinux-themes-sddm
+
+# spell checking
+aspell
+aspell-en
+
+# bluetooth
+blueman
+bluez
+bluez-firmware
+bluez-libs
+bluez-utils
+
+# xorg
+xorg-server
+xorg-setxkbmap
+xorg-xrdb
+xorg-xrandr
+
+# i3/wm stuff
+i3-wm
+i3lock
+i3status
+j4-dmenu-desktop
+dmenu
+eog
+caffeine-ng
+gedit
+gnome-keyring
+gnome-terminal
+gnome-screenshot
+google-chrome
+nautilus
+notification-daemon
+xautolock
+
+# random stuff
+emojione-picker-git
+
+# theming
+lxappearance
+numix-themes
+
+# networking
+networkmanager
+network-manager-applet
+networkmanager-openvpn
+
+# vpn
+openvpn
+openssl
+
+# editors/code
+gvim
+visual-studio-code
+zeal

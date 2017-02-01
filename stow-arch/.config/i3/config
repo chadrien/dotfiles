@@ -57,7 +57,7 @@ client.urgent               $dark        $grey         $mgrey	$lgrey
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
-# meh
+# meh… hidpi crap :/
 exec i3-msg restart
 
 # Use Mouse+$mod to drag floating windows to their wanted position
