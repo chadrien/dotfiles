@@ -9,6 +9,9 @@ exec xrdb -merge ~/.Xresources
 exec bash ~/.screenlayout/solo.sh
 
 # mac-us keymap
+# the double call to `setxkbmap us` is a weird trick so the `§/±` key works correctly instead of being `</>` key
+exec setxkbmap us -variant mac
+exec setxkbmap -option apple:badmap
 exec setxkbmap us -variant mac
 
 # compose key

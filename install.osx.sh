@@ -9,14 +9,16 @@ export DOTFILES_ROOT=`dirname $0`
 [ ! -d '/opt' ] && sudo mkdir /opt && sudo chown `whoami`:staff /opt
 [ ! -d '/usr/local/bin' ] && sudo mkdir -p /usr/local/bin && sudo chown `whoami`:staff /usr/local/bin
 
-source $DOTFILES_ROOT/stow/.config/env.sh
+export HOMEBREW_ROOT=/opt/homebrew
+export PATH=$HOMEBREW_ROOT/bin:/usr/local/bin:$PATH
 
 # install homebrew stuff, to do before anything else
-source $DOTFILES_ROOT/homebrew/setup.sh
+source $DOTFILES_ROOT/homebrew/setup.osx.sh
 
 # run remaining setups
-for dir in $(find $DOTFILES_ROOT -type d -depth 1 -not -name 'stow' -not -name 'homebrew'); do
+for dir in $(find $DOTFILES_ROOT -type d -depth 1 -not -name 'stow*' -not -name 'homebrew'); do
   [ -f "${dir}/setup.sh" ] && source "${dir}/setup.sh"
+  [ -f "${dir}/setup.osx.sh" ] && source "${dir}/setup.osx.sh"
 done
 
 (cd $DOTFILES_ROOT; stow -t $HOME stow)
