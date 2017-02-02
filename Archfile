@@ -17,6 +17,8 @@ hub-git
 meld
 openssh
 ruby-git-up
+tcl
+tk
 
 # sound
 alsa-utils
@@ -49,6 +51,7 @@ xorg-server
 xorg-setxkbmap
 xorg-xrdb
 xorg-xrandr
+xorg-xsetroot
 
 # i3/wm stuff
 i3-wm
@@ -67,7 +70,7 @@ notification-daemon
 
 # screensaver
 xscreensaver-aerial
-xscreensaver-aerial-videos
+# xscreensaver-aerial-videos
 
 # random stuff
 emojione-picker-git
@@ -75,6 +78,7 @@ emojione-picker-git
 # theming
 lxappearance
 numix-themes
+numix-circle-icon-theme-git
 
 # networking
 networkmanager
@@ -89,3 +93,11 @@ openssl
 gvim
 visual-studio-code
 zeal
+
+# fonts
+fira-code-git
+noto-fonts-emoji
+ttf-dejavu
+
+# mac touchpad
+xf86-input-mtrack-git
