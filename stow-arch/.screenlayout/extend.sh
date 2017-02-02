@@ -20,4 +20,4 @@ fb_h=$(echo $(( $int_h + $scaled_ext_h )) )
 
 int_x_offset=$(echo $(( ($int_w-$scaled_ext_w)/2 )) | sed 's/-//')
 
-xrandr --output $INT --auto --pos ${int_x_offset}x${scaled_ext_h} --output $EXT --scale ${scale}x${scale} --auto --pos 0x0 --fb ${fb_w}x${fb_h}
+xrandr --output $INT --auto --dpi 160 --pos ${int_x_offset}x${scaled_ext_h} --output $EXT --scale ${scale}x${scale} --auto --pos 0x0 --fb ${fb_w}x${fb_h}

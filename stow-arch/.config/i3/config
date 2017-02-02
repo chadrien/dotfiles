@@ -6,7 +6,7 @@
 exec xrdb -merge ~/.Xresources
 
 # set up screen layout
-exec bash ~/.screenlayout/solo.sh
+exec bash ~/.screenlayout/auto.sh
 
 # mac-us keymap
 # the double call to `setxkbmap us` is a weird trick so the `§/±` key works correctly instead of being `</>` key
