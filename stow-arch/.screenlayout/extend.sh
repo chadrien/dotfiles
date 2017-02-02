@@ -1,18 +1,23 @@
-#!/bin/sh
-# extend non-HiDPI external display on DP* above HiDPI internal display eDP*
-# see also https://wiki.archlinux.org/index.php/HiDPI
-# you may run into https://bugs.freedesktop.org/show_bug.cgi?id=39949
-#                  https://bugs.launchpad.net/ubuntu/+source/xorg-server/+bug/883319
+#!/usr/bin/env bash
 
+INT=eDP-1
 EXT=$1
 
-if [ -n $2 ]; then
-  INT=$2
-fi
+xrandr --output $EXT --auto
 
-ext_w=`xrandr | sed 's/^'"${EXT}"' [^0-9]* \([0-9]\+\)x.*$/\1/p;d'`
-ext_h=`xrandr | sed 's/^'"${EXT}"' [^0-9]* [0-9]\+x\([0-9]\+\).*$/\1/p;d'`
-int_w=`xrandr | sed 's/^'"${INT}"' [^0-9]* \([0-9]\+\)x.*$/\1/p;d'`
-off_w=`echo $(( ($int_w-$ext_w)/2 )) | sed 's/^-//'`
+int_w=$(xrandr | grep $INT | sed -ne 's/.* \([0-9]\+\)x.*/\1/p')
+int_h=$(xrandr | grep $INT | sed -ne 's/.*[0-9]x\([0-9]\+\).*/\1/p')
 
-xrandr --output "${INT}" --auto --pos ${off_w}x${ext_h} --scale 1x1  --output "${EXT}" --auto --scale 2x2 --pos 0x0
+original_ext_w=$(xrandr | grep $EXT | sed -ne 's/.* \([0-9]\+\)x.*/\1/p')
+original_ext_h=$(xrandr | grep $EXT | sed -ne 's/.*[0-9]x\([0-9]\+\).*/\1/p')
+
+[ -n "$2" ] && scale=$2 || scale=1.75
+scaled_ext_w=`(bc <<< $original_ext_w*$scale) | sed 's/\..*//'`
+scaled_ext_h=`(bc <<< $original_ext_h*$scale) | sed 's/\..*//'`
+
+fb_w=$(echo $(( $int_w > $scaled_ext_w ? $int_w : $scaled_ext_w )) )
+fb_h=$(echo $(( $int_h + $scaled_ext_h )) )
+
+int_x_offset=$(echo $(( ($int_w-$scaled_ext_w)/2 )) | sed 's/-//')
+
+xrandr --output $INT --auto --pos ${int_x_offset}x${scaled_ext_h} --output $EXT --scale ${scale}x${scale} --auto --pos 0x0 --fb ${fb_w}x${fb_h}
