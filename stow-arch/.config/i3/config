@@ -30,7 +30,7 @@ exec --no-startup-id pnmixer
 exec --no-startup-id emojione-picker
 
 # screenlock
-exec --no-startup-id xautolock -time 2 -locker 'i3lock -c 000000'
+exec --no-startup-id xscreensaver -nosplash
 
 # mod
 set $mod Mod4

@@ -52,7 +52,6 @@ xorg-xrandr
 
 # i3/wm stuff
 i3-wm
-i3lock
 i3status
 j4-dmenu-desktop
 dmenu
@@ -65,7 +64,10 @@ gnome-screenshot
 google-chrome
 nautilus
 notification-daemon
-xautolock
+
+# screensaver
+xscreensaver-aerial
+xscreensaver-aerial-videos
 
 # random stuff
 emojione-picker-git
