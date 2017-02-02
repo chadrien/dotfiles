@@ -20,5 +20,6 @@
     },
     "terminal.integrated.shell.osx": "/opt/homebrew/bin/fish",
     "window.zoomLevel": 0,
-    "vim.useCtrlKeys": true
+    "vim.useCtrlKeys": true,
+    "workbench.welcome.enabled": false
 }
