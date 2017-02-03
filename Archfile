@@ -110,3 +110,6 @@ bcwc-pcie-firmware
 # media
 spotify
 xbindkeys
+vlc
+qt4
+# ^ required by vlc but not mark as dependency…
