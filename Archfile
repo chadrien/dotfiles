@@ -101,3 +101,11 @@ ttf-dejavu
 
 # mac touchpad
 xf86-input-mtrack-git
+
+# camera
+bcwc-pcie-dkms
+bcwc-pcie-firmware
+
+# media
+spotify
+xbindkeys
