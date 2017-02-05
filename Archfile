@@ -59,7 +59,7 @@ i3-wm
 i3status
 j4-dmenu-desktop
 dmenu
-eog
+gthumb
 caffeine-ng
 gedit
 gnome-keyring
@@ -97,8 +97,9 @@ zeal
 
 # fonts
 fira-code-git
-noto-fonts-emoji
+ttf-emojione-color
 ttf-dejavu
+fontconfig
 
 # mac touchpad
 xf86-input-mtrack-git

@@ -8,9 +8,6 @@ exec xrdb -merge ~/.Xresources
 # set up screen layout
 exec bash ~/.screenlayout/auto.sh
 
-# xbindkeys
-exec --not-startup-id xbindkeys
-
 # mac-us keymap
 exec setxkbmap us -variant mac
 exec setxkbmap -option apple:badmap
@@ -32,6 +29,9 @@ exec --no-startup-id emojione-picker
 
 # screenlock
 exec --no-startup-id xscreensaver -nosplash
+
+# xbindkeys
+exec xbindkeys
 
 # mod
 set $mod Mod4
