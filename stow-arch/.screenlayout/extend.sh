@@ -5,11 +5,11 @@ EXT=$1
 
 xrandr --output $EXT --auto
 
-int_w=$(xrandr | grep $INT | sed -ne 's/.* \([0-9]\+\)x.*/\1/p')
-int_h=$(xrandr | grep $INT | sed -ne 's/.*[0-9]x\([0-9]\+\).*/\1/p')
+int_w=$(xrandr | grep "^$INT" | sed -ne 's/.* \([0-9]\+\)x.*/\1/p')
+int_h=$(xrandr | grep "^$INT" | sed -ne 's/.*[0-9]x\([0-9]\+\).*/\1/p')
 
-original_ext_w=$(xrandr | grep $EXT | sed -ne 's/.* \([0-9]\+\)x.*/\1/p')
-original_ext_h=$(xrandr | grep $EXT | sed -ne 's/.*[0-9]x\([0-9]\+\).*/\1/p')
+original_ext_w=$(xrandr | grep "^$EXT" | sed -ne 's/.* \([0-9]\+\)x.*/\1/p')
+original_ext_h=$(xrandr | grep "^$EXT" | sed -ne 's/.*[0-9]x\([0-9]\+\).*/\1/p')
 
 [ -n "$2" ] && scale=$2 || scale=1.65
 scaled_ext_w=`(bc <<< $original_ext_w*$scale) | sed 's/\..*//'`
