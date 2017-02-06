@@ -28,7 +28,7 @@ exec --no-startup-id pnmixer
 exec --no-startup-id emojione-picker
 
 # screenlock
-exec --no-startup-id xscreensaver -nosplash
+exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
 
 # xbindkeys
 exec xbindkeys

@@ -70,8 +70,8 @@ nautilus
 notification-daemon
 
 # screensaver
-xscreensaver-aerial
-# xscreensaver-aerial-videos
+xautolock
+i3lock-fancy-git
 
 # random stuff
 emojione-picker-git
