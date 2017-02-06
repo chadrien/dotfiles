@@ -20,6 +20,11 @@ Section "InputClass"
 
     Option "IgnoreThumb" "true"
     Option "IgnorePalm" "true"
+
+    Option          "TapButton1" "0"
+    Option          "TapButton2" "0"
+    Option          "TapButton3" "0"
+    Option          "TapButton4" "0"
 EndSection
 EOT
 
