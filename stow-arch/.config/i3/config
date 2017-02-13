@@ -26,6 +26,7 @@ exec --no-startup-id nm-applet
 exec --no-startup-id blueman-applet
 exec --no-startup-id pnmixer
 exec --no-startup-id emojione-picker
+exec --no-startup-id xautolock-applet
 
 # screenlock
 exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
