@@ -21,6 +21,7 @@ openssh
 ruby-git-up
 tcl
 tk
+tig
 
 # sound
 alsa-utils
@@ -95,12 +96,20 @@ gvim
 visual-studio-code
 zeal
 
+# neovim
+neovim
+python-neovim
+python2-neovim
+ruby-neovim
+
 # fonts
+otf-fira-mono
 fira-code-git
 ttf-dejavu
 noto-fonts-emoji
 fontconfig
 noto-fonts-cjk
+all-repository-fonts
 
 # mac touchpad
 xf86-input-mtrack-git
