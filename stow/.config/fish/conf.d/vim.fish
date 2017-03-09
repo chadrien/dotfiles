@@ -1,0 +1,1 @@
+alias node-debug="node (which node-dbgp) -h 127.0.0.1 -p 9000"

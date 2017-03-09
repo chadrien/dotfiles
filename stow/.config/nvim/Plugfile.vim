@@ -1,6 +1,6 @@
 " theme
 function! OnedarkAirline(info)
-    if a:info.status == 'installed' || a.info.force
+    if a:info.status == 'installed' || a:info.force
         !mkdir -p ~/.config/nvim/autoload/airline/themes
         !ln -s ~/.config/nvim/plugged/onedark.vim/autoload/airline/themes/onedark.vim ~/.config/nvim/autoload/airline/themes/
     endif
@@ -11,8 +11,10 @@ Plug 'joshdick/onedark.vim', { 'do': function('OnedarkAirline') }
 Plug 'bling/vim-airline'
 
 " unite
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'shougo/unite.vim'
 Plug 'shougo/unite-outline'
+Plug 'Shougo/neoyank.vim'
 
 " utils
 Plug 'kien/ctrlp.vim'
@@ -27,6 +29,7 @@ Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'raimondi/delimitmate'
+Plug 'joonty/vdebug', { 'do': 'sudo npm i -g komodo-debug' }
 
 " syntastic
 Plug 'scrooloose/syntastic'

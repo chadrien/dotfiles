@@ -9,3 +9,4 @@ nmap <C-u>ta :Unite -start-insert tab<CR>
 nmap <C-u>bu :Unite -start-insert buffer<CR>
 nmap <C-u>gr :Unite -start-insert grep<CR>
 nmap <C-u>ou :Unite -start-insert outline<CR>
+nmap <C-u>yy :Unite -start-insert history/yank<CR>
