@@ -30,6 +30,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'scrooloose/nerdcommenter'
 Plug 'raimondi/delimitmate'
 Plug 'joonty/vdebug', { 'do': 'sudo npm i -g komodo-debug' }
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'myusuf3/numbers.vim'
 
 " syntastic
 Plug 'scrooloose/syntastic'
@@ -37,3 +39,7 @@ Plug 'scrooloose/syntastic'
 " js
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'mxw/vim-jsx', { 'for': 'javascript' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+
+" elm
+Plug 'elmcast/elm-vim', { 'for': 'elm' }

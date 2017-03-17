@@ -21,5 +21,6 @@
     "terminal.integrated.shell.osx": "/opt/homebrew/bin/fish",
     "window.zoomLevel": 0,
     "vim.useCtrlKeys": true,
-    "workbench.welcome.enabled": false
+    "workbench.welcome.enabled": false,
+    "workbench.colorTheme": "Atom One Dark"
 }
