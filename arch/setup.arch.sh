@@ -31,3 +31,17 @@ EOT
 # fix kbd layout
 echo 0 | sudo tee /sys/module/hid_apple/parameters/iso_layout
 echo 'options hid_apple iso_layout=0' | sudo tee -a /etc/modprobe.d/hid_apple.conf
+
+cat <<EOT | sudo tee /etc/systemd/system/fix-suspend.service
+[Unit]
+Description=Fix suspend
+
+[Service]
+ExecStart=/bin/bash -c "echo XHC1 >> /proc/acpi/wakeup"
+
+[Install]
+WantedBy=multi-user.target
+EOT
+sudo systemctl enable fix-suspend
+sudo systemctl daemon-reload
+sudo systemctl start fix-suspend

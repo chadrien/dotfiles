@@ -21,7 +21,12 @@
         "when": "editorTextFocus"
     },
     {
-        "key": "shift+cmd+1",
+        "key": "shift+ctrl+1",
         "command": "workbench.action.terminal.focus"
+    },
+    {
+        "key": "shift+escape",
+        "command": "workbench.action.focusFirstEditorGroup",
+        "when": "!editorTextFocus"
     }
 ]

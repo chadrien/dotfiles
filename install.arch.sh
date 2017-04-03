@@ -11,7 +11,7 @@ packages=()
 for package in $(cat $DOTFILES_ROOT/Archfile | grep -v '^#'); do
   packages+=($package)
 done
-yaourt -S --needed ${packages[@]}
+yaourt -S --needed ${packages[@]} --noconfirm
 
 # run setups
 for dir in $(find $DOTFILES_ROOT -maxdepth 1 -type d -not -name 'stow*' -not -name 'homebrew'); do

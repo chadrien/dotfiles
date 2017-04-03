@@ -1,3 +1,6 @@
+let g:python_host_prog = '/usr/bin/python2'
+let g:python3_host_prog = '/usr/bin/python'
+
 call plug#begin('~/.config/nvim/plugged')
 source ~/.config/nvim/Plugfile.vim
 call plug#end()

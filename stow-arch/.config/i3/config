@@ -29,7 +29,7 @@ exec --no-startup-id emojione-picker
 exec --no-startup-id xautolock-applet
 
 # screenlock
-exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy'
+exec --no-startup-id xautolock -time 2 -locker 'i3lock-fancy -f DejaVu-Sans'
 
 # xbindkeys
 exec xbindkeys

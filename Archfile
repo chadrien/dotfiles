@@ -2,9 +2,9 @@
 stow
 
 # cli utils
-ack
 fish
 httpie
+the_silver_searcher
 thefuck
 htop
 xsel
@@ -79,7 +79,7 @@ emojione-picker-git
 
 # theming
 lxappearance
-numix-gtk-themes
+numix-gtk-theme
 numix-circle-icon-theme-git
 
 # networking
@@ -105,10 +105,10 @@ ruby-neovim
 otf-fira-mono
 fira-code-git
 ttf-dejavu
-noto-fonts-emoji
 fontconfig
 noto-fonts-cjk
 all-repository-fonts
+emojione-color-font
 
 # mac touchpad
 xf86-input-mtrack-git
