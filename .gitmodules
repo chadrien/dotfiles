@@ -1,0 +1,3 @@
+[submodule "stow/.config/nvim/bundle/neobundle.vim"]
+	path = stow/.config/nvim/bundle/neobundle.vim
+	url = https://github.com/Shougo/neobundle.vim

@@ -2,7 +2,7 @@
 /stow-osx/Library/Application Support/Code
 
 # neovim
-/stow/.config/nvim/plugged
+/stow/.config/nvim/bundle
 /stow/.config/nvim/_backup
 /stow/.config/nvim/_temp
 stow/.config/nvim/autoload/airline/themes/onedark.vim

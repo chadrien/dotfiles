@@ -1,48 +1,51 @@
+set runtimepath+=~/.config/nvim/bundle/neobundle.vim/
+call neobundle#begin(expand('~/.config/nvim/bundle/'))
+
+NeoBundleFetch 'Shougo/neobundle.vim'
+
 " theme
-function! OnedarkAirline(info)
-    if a:info.status == 'installed' || a:info.force
-        !mkdir -p ~/.config/nvim/autoload/airline/themes
-        !ln -s ~/.config/nvim/plugged/onedark.vim/autoload/airline/themes/onedark.vim ~/.config/nvim/autoload/airline/themes/
-    endif
-endfunction
-Plug 'joshdick/onedark.vim', { 'do': function('OnedarkAirline') }
+Plug 'joshdick/onedark.vim', { 'build': { 'unix': 'mkdir -p ~/.config/nvim/autoload/airline/themes ; ln -s ~/.config/nvim/plugged/onedark.vim/autoload/airline/themes/onedark.vim ~/.config/nvim/autoload/airline/themes/' } }
 
 " airline
 Plug 'bling/vim-airline'
 
 " unite
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'shougo/unite.vim'
-Plug 'shougo/unite-outline'
-Plug 'Shougo/neoyank.vim'
+NeoBundle 'Shougo/vimproc.vim', { 'build': { 'unix': 'make' } }
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'shougo/unite.vim'
+NeoBundle 'shougo/unite-outline'
+NeoBundle 'Shougo/neoyank.vim'
 
 " utils
-Plug 'kien/ctrlp.vim'
-Plug 'embear/vim-localvimrc'
-Plug 'mattn/emmet-vim'
-Plug 'editorconfig/editorconfig-vim'
-Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/nerdtree'
-Plug 'tpope/vim-surround'
-Plug 'matchit.zip'
-Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-fugitive'
-Plug 'scrooloose/nerdcommenter'
-Plug 'raimondi/delimitmate'
-Plug 'joonty/vdebug', { 'do': 'sudo npm i -g komodo-debug' }
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
-Plug 'myusuf3/numbers.vim'
-Plug 'troydm/zoomwintab.vim'
-Plug 'airblade/vim-gitgutter'
+NeoBundle 'kien/ctrlp.vim'
+NeoBundle 'embear/vim-localvimrc'
+NeoBundle 'mattn/emmet-vim'
+NeoBundle 'editorconfig/editorconfig-vim'
+NeoBundle 'easymotion/vim-easymotion'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'vim-scripts/matchit.zip'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-fugitive'
+NeoBundle 'scrooloose/nerdcommenter'
+NeoBundle 'raimondi/delimitmate'
+NeoBundle 'Valloric/YouCompleteMe', { 'build': { 'unix': './install.py' } }
+NeoBundle 'myusuf3/numbers.vim'
+NeoBundle 'troydm/zoomwintab.vim'
+NeoBundle 'airblade/vim-gitgutter'
 
 " syntastic
-Plug 'scrooloose/syntastic'
+NeoBundle 'scrooloose/syntastic'
 
 " js
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'mxw/vim-jsx', { 'for': 'javascript' }
-Plug 'herringtondarkholme/yats.vim', { 'for': 'typescript' }
-Plug 'quramy/tsuquyomi', { 'for': 'typescript' }
+NeoBundle 'pangloss/vim-javascript'
+NeoBundle 'mxw/vim-jsx'
+NeoBundle 'herringtondarkholme/yats.vim'
+NeoBundle 'quramy/tsuquyomi'
 
 " elm
-Plug 'elmcast/elm-vim', { 'for': 'elm' }
+NeoBundle 'elmcast/elm-vim'
+
+call neobundle#end()
+filetype plugin indent on
+NeoBundleCheck
