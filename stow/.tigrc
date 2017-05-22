@@ -1,6 +1,0 @@
-bind main P !git push origin head
-bind main p !git pull --rebase
-bind main u !git up
-bind main f !git fetch --all
-
-bind status A !git commit --amend

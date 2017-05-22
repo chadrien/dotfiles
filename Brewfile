@@ -1,30 +1,31 @@
 tap 'caskroom/cask'
 tap 'homebrew/services'
-tap 'domt4/autoupdate'
-tap 'koekeishiya/formulae'
+tap 'caskroom/fonts'
+tap 'neovim/neovim'
 
 brew 'stow'
 
-cask 'tcl'
 brew 'git'
 brew 'hub'
-brew 'tig'
 
 brew 'node'
 brew 'npm'
 
-brew 'fish'
+brew 'zsh'
+brew 'zsh-syntax-highlighting'
+brew 'autoenv'
 brew 'tmux'
-brew 'ack'
 brew 'gnu-sed', args: ['with-default-names']
-brew 'thefuck'
+brew 'the_silver_searcher'
 brew 'tree'
 brew 'reattach-to-user-namespace'
 
-brew 'kwm', restart_service: true
-brew 'khd', restart_service: true
+brew 'neovim'
+brew 'python'
+brew 'python3'
 
 cask 'alfred'
+cask 'amethyst'
 cask 'dash'
 cask 'docker'
 cask 'font-fira-code'

@@ -4,10 +4,10 @@ call neobundle#begin(expand('~/.config/nvim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " theme
-Plug 'joshdick/onedark.vim', { 'build': { 'unix': 'mkdir -p ~/.config/nvim/autoload/airline/themes ; ln -s ~/.config/nvim/plugged/onedark.vim/autoload/airline/themes/onedark.vim ~/.config/nvim/autoload/airline/themes/' } }
+NeoBundle 'joshdick/onedark.vim', { 'build': { 'unix': 'mkdir -p ~/.config/nvim/autoload/airline/themes ; ln -s ~/.config/nvim/plugged/onedark.vim/autoload/airline/themes/onedark.vim ~/.config/nvim/autoload/airline/themes/' } }
 
 " airline
-Plug 'bling/vim-airline'
+NeoBundle 'bling/vim-airline'
 
 " unite
 NeoBundle 'Shougo/vimproc.vim', { 'build': { 'unix': 'make' } }

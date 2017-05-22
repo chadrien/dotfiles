@@ -1,1 +1,0 @@
-set -gx nvm_prefix /usr/share/nvm

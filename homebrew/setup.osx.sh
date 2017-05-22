@@ -6,8 +6,6 @@ if [ ! -d "$HOMEBREW_ROOT" ]; then
   brew tap homebrew/bundle
 fi
 
-(cd $DOTFILES_ROOT; brew bundle)
-
-brew autoupdate --start --cleanup
+(cd $DOTFILES_ROOT; brew bundle --no-upgrade)
 
 sudo launchctl config user path $PATH

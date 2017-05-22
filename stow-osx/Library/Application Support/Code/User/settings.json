@@ -1,9 +1,11 @@
 // Place your settings in this file to overwrite the default settings
 {
+    "autoimport.doubleQuotes": false,
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
     "editor.scrollBeyondLastLine": false,
+    "editor.snippetSuggestions": "none",
     "editor.renderIndentGuides": true,
     "workbench.editor.enablePreview": false,
     "emmet.syntaxProfiles": {
@@ -18,7 +20,7 @@
         "**/.DS_Store": true,
         "**/.vscode": true
     },
-    "terminal.integrated.shell.osx": "/opt/homebrew/bin/fish",
+    "terminal.integrated.shell.osx": "/opt/homebrew/bin/zsh",
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.commandsToSkipShell": [
         "editor.action.toggleTabFocusMode",
@@ -60,7 +62,9 @@
         "workbench.action.terminal.toggleTerminal"
     ],
     "window.zoomLevel": 0,
+    "vim.easymotion": true,
     "vim.useCtrlKeys": true,
     "workbench.welcome.enabled": false,
-    "workbench.colorTheme": "Atom One Dark"
+    "workbench.iconTheme": "vs-seti",
+    "workbench.colorTheme": "One Dark Pro"
 }
