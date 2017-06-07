@@ -104,14 +104,13 @@ fira-code-git
 ttf-dejavu
 fontconfig
 noto-fonts-cjk
-emojione-color-font
+ttf-emojione-color
 
 # mac touchpad
 xf86-input-mtrack-git
 
-# camera
-bcwc-pcie-dkms
-bcwc-pcie-firmware
+# webcam
+bcwc-pcie-git
 
 # media
 spotify
