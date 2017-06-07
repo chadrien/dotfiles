@@ -1,3 +1,6 @@
+# first things first
+base-devel
+
 # dotfiles requirement
 stow
 
