@@ -2,10 +2,9 @@
 stow
 
 # cli utils
-fish
+zsh
 httpie
 the_silver_searcher
-thefuck
 htop
 xsel
 
@@ -21,7 +20,6 @@ openssh
 ruby-git-up
 tcl
 tk
-tig
 
 # sound
 alsa-utils
@@ -102,7 +100,6 @@ python2-neovim
 ruby-neovim
 
 # fonts
-otf-fira-mono
 fira-code-git
 ttf-dejavu
 fontconfig
