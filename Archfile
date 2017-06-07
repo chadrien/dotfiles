@@ -95,6 +95,7 @@ openssl
 # editors/code
 gvim
 zeal
+visual-studio-code
 
 # neovim
 neovim
