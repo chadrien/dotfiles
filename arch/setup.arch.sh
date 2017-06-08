@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+# enable services
+sudo systemctl enable sddm
+sudo systemctl enable NetworkManager
+
 # fn keys as default
 echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode
 echo 'options hid_apple fnmode=2' | sudo tee /etc/modprobe.d/hid_apple.conf

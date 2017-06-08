@@ -6,3 +6,5 @@
 /stow/.config/nvim/_backup
 /stow/.config/nvim/_temp
 stow/.config/nvim/autoload/airline/themes/onedark.vim
+
+/stow-arch/.local/*

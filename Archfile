@@ -10,6 +10,8 @@ httpie
 the_silver_searcher
 htop
 xsel
+autoenv
+zsh-syntax-highlighting
 
 # tmux
 tmux
@@ -73,7 +75,7 @@ notification-daemon
 
 # screensaver
 xautolock
-i3lock-fancy-git
+i3lock-fancy-dualmonitors-git
 
 # random stuff
 emojione-picker-git

@@ -46,7 +46,8 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-source /opt/homebrew/opt/autoenv/activate.sh
+[ -f /opt/homebrew/opt/autoenv/activate.sh ] && source /opt/homebrew/opt/autoenv/activate.sh
+[ -f /usr/share/autoenv/activate.sh ] && source /usr/share/autoenv/activate.sh
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -58,7 +59,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -77,3 +79,5 @@ fi
 reload() {
   . ~/.zshrc
 }
+
+[ -f $HOME/.dir_colors/dircolors ] && eval `dircolors $HOME/.dir_colors/dircolors`
