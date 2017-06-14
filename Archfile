@@ -6,6 +6,7 @@ stow
 
 # cli utils
 zsh
+zsh-completions
 httpie
 the_silver_searcher
 htop
@@ -58,6 +59,7 @@ xorg-setxkbmap
 xorg-xrdb
 xorg-xrandr
 xorg-xsetroot
+bc
 
 # i3/wm stuff
 i3-wm
@@ -110,7 +112,7 @@ fira-code-git
 ttf-dejavu
 fontconfig
 noto-fonts-cjk
-ttf-emojione-color
+noto-fonts-emoji
 
 # mac touchpad
 xf86-input-mtrack-git
@@ -124,3 +126,8 @@ xbindkeys
 vlc
 qt4
 # ^ required by vlc but not mark as dependency…
+
+# printing
+cups
+system-config-printer
+gtk3-print-backends

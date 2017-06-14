@@ -3,6 +3,8 @@
 # enable services
 sudo systemctl enable sddm
 sudo systemctl enable NetworkManager
+sudo systemctl enable bluetooth
+sudo systemctl enable org.cups.cupsd.service
 
 # fn keys as default
 echo 2 | sudo tee /sys/module/hid_apple/parameters/fnmode

@@ -4,14 +4,13 @@
     "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
     "editor.fontSize": 13,
     "editor.fontLigatures": true,
+    "editor.minimap.enabled": false,
     "editor.scrollBeyondLastLine": false,
     "editor.snippetSuggestions": "none",
     "editor.renderIndentGuides": true,
-    "workbench.editor.enablePreview": false,
     "emmet.syntaxProfiles": {
         "javascript": "jsx"
     },
-    "typescript.check.tscVersion": false,
     "files.trimTrailingWhitespace": true,
     "files.exclude": {
         "**/.git": true,
@@ -20,7 +19,9 @@
         "**/.DS_Store": true,
         "**/.vscode": true
     },
-    "terminal.integrated.shell.osx": "/opt/homebrew/bin/zsh",
+    "gitlens.blame.line.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.statusBar.enabled": false,
     "terminal.integrated.fontSize": 13,
     "terminal.integrated.commandsToSkipShell": [
         "editor.action.toggleTabFocusMode",
@@ -61,10 +62,10 @@
         "workbench.action.terminal.scrollUpPage",
         "workbench.action.terminal.toggleTerminal"
     ],
+    "typescript.check.tscVersion": false,
     "window.zoomLevel": 0,
-    "vim.easymotion": true,
-    "vim.useCtrlKeys": true,
-    "workbench.welcome.enabled": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "vs-seti",
-    "workbench.colorTheme": "Monokai"
+    "workbench.welcome.enabled": false
 }

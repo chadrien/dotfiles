@@ -46,6 +46,9 @@ DISABLE_AUTO_TITLE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
+[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+[ -f /usr/share/nvm/nvm.sh ] && source /usr/share/nvm/nvm.sh
+
 [ -f /opt/homebrew/opt/autoenv/activate.sh ] && source /opt/homebrew/opt/autoenv/activate.sh
 [ -f /usr/share/autoenv/activate.sh ] && source /usr/share/autoenv/activate.sh
 
@@ -53,7 +56,7 @@ DISABLE_AUTO_TITLE="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker autoenv)
+plugins=(git docker autoenv tmuxinator zsh-completions)
 
 source $ZSH/oh-my-zsh.sh
 
