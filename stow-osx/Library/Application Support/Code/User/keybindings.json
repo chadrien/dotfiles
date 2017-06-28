@@ -28,5 +28,10 @@
         "key": "shift+escape",
         "command": "workbench.action.focusFirstEditorGroup",
         "when": "!editorTextFocus"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "workbench.action.toggleMaximizedPanel",
+        "when": "terminalFocus"
     }
 ]

@@ -60,12 +60,14 @@
         "workbench.action.terminal.scrollToTop",
         "workbench.action.terminal.scrollUp",
         "workbench.action.terminal.scrollUpPage",
-        "workbench.action.terminal.toggleTerminal"
+        "workbench.action.terminal.toggleTerminal",
+        "workbench.action.toggleMaximizedPanel"
     ],
     "typescript.check.tscVersion": false,
     "window.zoomLevel": 0,
     "workbench.colorTheme": "Monokai",
     "workbench.editor.enablePreview": false,
     "workbench.iconTheme": "vs-seti",
-    "workbench.welcome.enabled": false
+    "workbench.welcome.enabled": false,
+    "extensions.ignoreRecommendations": false
 }

@@ -226,4 +226,6 @@ bar {
 		inactive_workspace  $grey       $grey        $mgrey
 		urgent_workspace    $grey        $blue        $white
 	}
+
+        tray_output primary
 }
