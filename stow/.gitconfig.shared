@@ -11,8 +11,8 @@
     co = checkout
     go = "!f() { [ -z $1 ] && echo \"Usage: git go <branch>\" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f"
     br = branch -v
-    bra = br -a
-    brr = br -r
+    bra = branch -a
+    brr = branch -r
     master = checkout master
     cl = clone
     pop = stash pop
