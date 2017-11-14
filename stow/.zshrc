@@ -48,6 +48,9 @@ DISABLE_AUTO_TITLE="true"
 
 [ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
 [ -f /usr/share/nvm/nvm.sh ] && source /usr/share/nvm/nvm.sh
+[ -f /opt/homebrew/opt/nvm/nvm.sh ] && source /opt/homebrew/opt/nvm/nvm.sh
+nvm deactivate >/dev/null 2>&1
+nvm use default >/dev/null 2>&1
 
 [ -f /opt/homebrew/opt/autoenv/activate.sh ] && source /opt/homebrew/opt/autoenv/activate.sh
 [ -f /usr/share/autoenv/activate.sh ] && source /usr/share/autoenv/activate.sh
@@ -84,3 +87,8 @@ reload() {
 }
 
 [ -f $HOME/.dir_colors/dircolors ] && eval `dircolors $HOME/.dir_colors/dircolors`
+if [ -d /opt/homebrew/share/android-sdk ]; then
+  export ANDROID_SDK_ROOT=/opt/homebrew/share/android-sdk
+  export ANDROID_HOME=/opt/homebrew/share/android-sdk
+  function emulator { cd $ANDROID_HOME/tools && ./emulator "$@" && cd -; }
+fi

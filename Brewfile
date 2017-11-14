@@ -7,9 +7,9 @@ brew 'stow'
 
 brew 'git'
 brew 'hub'
+brew 'tig'
 
-brew 'node'
-brew 'npm'
+brew 'nvm'
 
 brew 'zsh'
 brew 'zsh-syntax-highlighting'
@@ -26,7 +26,6 @@ brew 'python3'
 
 cask 'alfred'
 cask 'amethyst'
-cask 'dash'
 cask 'docker'
 cask 'font-fira-code'
 cask 'google-chrome'

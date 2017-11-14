@@ -33,5 +33,23 @@
         "key": "ctrl+up",
         "command": "workbench.action.toggleMaximizedPanel",
         "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+shift+right",
+        "command": "workbench.action.togglePanelPosition",
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "workbench.action.moveEditorToNextGroup"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "workbench.action.moveEditorToPreviousGroup"
+    },
+    {
+        "key": "ctrl+]",
+        "command": "editor.action.goToDeclaration"
     }
+
 ]
