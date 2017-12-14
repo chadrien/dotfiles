@@ -96,5 +96,15 @@
         "workbench.action.togglePanelPosition"
     ],
     "gitlens.gitExplorer.enabled": false,
-    "workbench.panel.location": "right"
+    "workbench.panel.location": "right",
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": true,
+        "suppressWelcomeNotice": false
+    }
 }

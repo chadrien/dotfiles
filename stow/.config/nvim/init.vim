@@ -4,7 +4,7 @@ if &compatible
   set nocompatible               " Be iMproved
 endif
 
-source ~/.config/nvim/dein.vim
+" source ~/.config/nvim/dein.vim
 
 " Required:
 filetype plugin indent on
