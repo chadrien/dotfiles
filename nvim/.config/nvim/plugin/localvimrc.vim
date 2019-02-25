@@ -1,0 +1,1 @@
+let g:localvimrc_name=".vimrc"

@@ -1,0 +1,45 @@
+{
+    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
+    "editor.fontLigatures": true,
+    "editor.fontSize": 14,
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.colorTheme": "Monokai",
+    "terminal.integrated.fontFamily": "monospace",
+    "workbench.editor.enablePreview": false,
+    "terminal.integrated.fontSize": 13,
+    "editor.minimap.enabled": false,
+    "search.location": "panel",
+    "extensions.ignoreRecommendations": false,
+    "vim.easymotion": true,
+    "vim.useCtrlKeys": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "leader",
+                "e"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.toggleSidebarVisibility",
+                }
+            ]
+        }
+    ],
+    "editor.lineNumbers": "relative",
+    "editor.renderWhitespace": "boundary",
+    "editor.parameterHints": false,
+    "gitlens.advanced.messages": {
+        "suppressShowKeyBindingsNotice": true
+    },
+    "gitlens.currentLine.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "window.zoomLevel": 0,
+    "vim.hlsearch": true,
+    "vim.enableNeovim": true,
+    "files.associations": {
+        "*.Jenkinsfile": "groovy"
+    },
+    "javascript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "vim.neovimPath": "/usr/bin/nvim"
+}

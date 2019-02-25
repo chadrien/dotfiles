@@ -1,0 +1,51 @@
+[core]
+	excludesfile = ~/.gitignore.global
+
+[fetch]
+    prune = true
+
+[alias]
+    st = status -sb
+    purr = pull --rebase
+    lg = log --pretty=format:'%Cred%h%Creset -%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    ci = commit
+    cp = cherry-pick -ex
+    co = checkout
+    go = "!f() { [ -z $1 ] && echo \"Usage: git go <branch>\" && exit 1; git branch $1 2>/dev/null; git checkout $1; }; f"
+    br = branch -v
+    bra = branch -a
+    brr = branch -r
+    master = checkout master
+    cl = clone
+    pop = stash pop
+    unadd = reset HEAD --
+    wip = !git add -u && git add . && git ci -m"WIP"
+    unwip = !git reset --soft HEAD~ && git unadd
+    mt = mergetool
+    dt = difftool
+    ap = add -p
+    delete-merged-branches = !git branch --merged | grep -v '\\*' | grep -v 'master' | xargs git branch -d
+    co-pr = "!f() { [ -z $1 ] && echo \"Usage: git co-pr <pr-number>\" && exit 1; git fetch origin pull/$1/head:pr-$1 2>/dev/null; git checkout pr-$1; }; f"
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = true
+
+[mergetool]
+	keepBackup = false
+
+[gpg]
+	program = gpg2
+
+[diff]
+    compactionHeuristic = true
+
+[pager]
+    log = /usr/share/git/diff-highlight/diff-highlight | less
+    show = /usr/share/git/diff-highlight/diff-highlight | less
+    diff = /usr/share/git/diff-highlight/diff-highlight | less
+
+[interactive]
+    diffFilter = /usr/share/git/diff-highlight/diff-highlight

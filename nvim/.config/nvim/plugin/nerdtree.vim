@@ -1,0 +1,1 @@
+nmap <leader>e :NERDTreeToggle<cr>
