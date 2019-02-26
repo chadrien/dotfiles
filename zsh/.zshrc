@@ -7,7 +7,7 @@ prompt spaceship
 export NVM_DIR="$HOME/.nvm"
 source /usr/share/nvm/nvm.sh
 
-source /usr/share/autoenv/activate.sh
+source /usr/share/autoenv-git/activate.sh
 
 alias mux=tmuxinator
 
@@ -48,6 +48,6 @@ zstyle ':completion:*' menu select
 bindkey "^[[1;3C" forward-word
 bindkey "^[[1;3D" backward-word
 
-alias heroku="$(nvm which heroku) $(which -p heroku)"
+# alias heroku="$(nvm which heroku) $(which -p heroku)"
 alias remove-orphan-packages="yay -Rns $(yay -Qtdq)"
 alias reload="source $HOME/.zshrc"

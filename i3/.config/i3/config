@@ -13,11 +13,11 @@
 # exec sh /home/hdec/.screenlayout/auto.sh
 
 # startup stuff
-# exec --no-startup-id setxkbmap -option compose:ralt
+exec --no-startup-id setxkbmap -option compose:ralt
 
-# exec --no-startup-id xss-lock -- i3lock -c '#cccccc'
+exec --no-startup-id xss-lock -- i3lock -c '#cccccc'
 
-# exec --no-startup-id compton -CGb --no-fading-openclose
+exec --no-startup-id compton -CGb --no-fading-openclose
 
 # exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon 
 
@@ -27,7 +27,7 @@
 # exec --no-startup-id emojione-picker
 # exec --no-startup-id blueman-applet
 
-exec --no-startup-id "xsetroot -solid '#000000'"
+# exec --no-startup-id "xsetroot -solid '#000000'"
 
 set $mod Mod4
 
@@ -57,7 +57,7 @@ bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec "rofi -combi-modi window,drun,run -show combi -modi combi"
+bindsym $mod+d exec "rofi -dpi 220 -combi-modi window,drun,run -show combi -modi combi"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -199,9 +199,12 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 # and https://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
 # and https://askubuntu.com/questions/65764/how-do-i-toggle-sound-with-amixer
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle # mute sound
+#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
+#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
+#bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
