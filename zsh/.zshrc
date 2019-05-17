@@ -26,8 +26,10 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 alias reload="source $HOME/.zshrc"
-alias pbcopy="/mnt/c/Windows/System32/clip.exe"
 alias mux=tmuxinator
+alias choco=choco.exe
+alias pbcopy=pbcopy.exe
+alias pbpaste=pbpaste.exe
 
 #################################
 ############# Zplug #############
