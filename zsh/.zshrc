@@ -1,21 +1,15 @@
+# zmodload zsh/zprof
+
+export DOCKER_HOST="tcp://localhost:2375"
+export DISPLAY=:0
 export EDITOR=nvim
-
-autoload -U promptinit; promptinit
-prompt spaceship
-
-
-export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-
-source /usr/share/autoenv-git/activate.sh
-
-alias mux=tmuxinator
+export PATH=$HOME/.local/bin:$PATH
+export GOPATH=$HOME/.go
 
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
 HISTSIZE=50000
 SAVEHIST=10000
-
 ## History command configuration
 setopt extended_history       # record timestamp of command in HISTFILE
 setopt hist_expire_dups_first # delete duplicates first when HISTFILE size exceeds HISTSIZE
@@ -24,30 +18,56 @@ setopt hist_ignore_space      # ignore commands that start with space
 setopt hist_verify            # show command with history expansion to user before running it
 setopt inc_append_history     # add commands to HISTFILE in order of execution
 setopt share_history          # share command history data
-
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-source /usr/share/zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
-fpath=(/usr/share/zsh/site-functions $fpath)
-
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/hdec/.zshrc'
-
-autoload -Uz compinit
-compinit
-# End of lines added by compinstall
-
-bindkey -v
+## History binding
 bindkey '^R' history-incremental-search-backward
 
 zstyle ':completion:*' menu select
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
-bindkey "^[[1;3C" forward-word
-bindkey "^[[1;3D" backward-word
-
-# alias heroku="$(nvm which heroku) $(which -p heroku)"
-alias remove-orphan-packages="yay -Rns $(yay -Qtdq)"
 alias reload="source $HOME/.zshrc"
+alias pbcopy="/mnt/c/Windows/System32/clip.exe"
+alias mux=tmuxinator
+
+#################################
+############# Zplug #############
+#################################
+
+source /usr/share/zplug/init.zsh
+
+zplug themes/norm, from:oh-my-zsh, as:theme, defer:2
+
+export NVM_DIR="$HOME/.nvm"
+# export NVM_LAZY_LOAD=true
+zplug lukechilds/zsh-nvm, defer:2
+
+export AUTOENV_FILE_ENTER=.env
+zplug Tarrasch/zsh-autoenv, defer:2
+
+zplug zsh-users/zsh-syntax-highlighting, defer:2
+
+zplug zsh-users/zsh-history-substring-search, defer:2
+bindkey "$terminfo[kcuu1]" history-substring-search-up
+bindkey "$terminfo[kcud1]" history-substring-search-down
+
+zplug plugins/tmuxinator, from:oh-my-zsh, defer:2
+
+# Install plugins if there are plugins that have not been installed
+# if ! zplug check --verbose; then
+#     printf "Install? [y/N]: "
+#     if read -q; then
+#         echo; zplug install
+#     fi
+# fi
+
+zplug load #--verbose
+
+export PATH=$ZPLUG_BIN:$PATH
+
+#################################
+########### Zplug end ###########
+#################################
+
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+
+export PATH=$(echo $PATH | sed -e 's#/mnt/c/Program Files/nodejs##')
