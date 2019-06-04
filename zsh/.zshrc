@@ -35,7 +35,9 @@ alias pbpaste=pbpaste.exe
 ############# Zplug #############
 #################################
 
-source /usr/share/zplug/init.zsh
+[ -f /usr/share/zplug/init.zsh ] && source /usr/share/zplug/init.zsh
+[ -f /usr/share/zsh/scripts/zplug/init.zsh ] && source /usr/share/zsh/scripts/zplug/init.zsh
+[ -f /home/linuxbrew/.linuxbrew/opt/zplug/init.zsh ] && source $ZPLUG_HOME/home/linuxbrew/.linuxbrew/opt/zplug/init.zsh
 
 zplug themes/norm, from:oh-my-zsh, as:theme, defer:2
 
@@ -71,5 +73,6 @@ export PATH=$ZPLUG_BIN:$PATH
 #################################
 
 test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 export PATH=$(echo $PATH | sed -e 's#/mnt/c/Program Files/nodejs##')
