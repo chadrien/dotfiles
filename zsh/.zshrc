@@ -1,10 +1,11 @@
 # zmodload zsh/zprof
 
-export DOCKER_HOST="tcp://localhost:2375"
+# export DOCKER_HOST="tcp://localhost:2375"
 export DISPLAY=:0
 export EDITOR=nvim
-export PATH=$HOME/.local/bin:$PATH
+# export PATH=$HOME/.local/bin:$PATH
 export GOPATH=$HOME/.go
+export ZPLUG_HOME=$HOME/src/zplug
 
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -27,17 +28,15 @@ bindkey "^[[1;5D" backward-word
 
 alias reload="source $HOME/.zshrc"
 alias mux=tmuxinator
-alias choco=choco.exe
-alias pbcopy=pbcopy.exe
-alias pbpaste=pbpaste.exe
+# alias choco=choco.exe
+# alias pbcopy=pbcopy.exe
+# alias pbpaste=pbpaste.exe
 
 #################################
 ############# Zplug #############
 #################################
 
-[ -f /usr/share/zplug/init.zsh ] && source /usr/share/zplug/init.zsh
-[ -f /usr/share/zsh/scripts/zplug/init.zsh ] && source /usr/share/zsh/scripts/zplug/init.zsh
-[ -f /home/linuxbrew/.linuxbrew/opt/zplug/init.zsh ] && source $ZPLUG_HOME/home/linuxbrew/.linuxbrew/opt/zplug/init.zsh
+[ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 
 zplug themes/norm, from:oh-my-zsh, as:theme, defer:2
 
@@ -53,16 +52,20 @@ zplug zsh-users/zsh-syntax-highlighting, defer:2
 zplug zsh-users/zsh-history-substring-search, defer:2
 bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
 
 zplug plugins/tmuxinator, from:oh-my-zsh, defer:2
 
+zplug tfutils/tfenv, as:command, use:"bin/*"
+
 # Install plugins if there are plugins that have not been installed
-# if ! zplug check --verbose; then
-#     printf "Install? [y/N]: "
-#     if read -q; then
-#         echo; zplug install
-#     fi
-# fi
+if ! zplug check --verbose; then
+    printf "Install? [y/N]: "
+    if read -q; then
+        echo; zplug install
+    fi
+fi
 
 zplug load #--verbose
 

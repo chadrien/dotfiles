@@ -30,13 +30,13 @@ alert = #bd2c40
 [bar/bar]
 monitor = ${env:MONITOR:eDP1}
 width = 100%
-height = ${env:HEIGHT:20}
+height = ${env:HEIGHT:40}
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0.0
 fixed-center = false
 
-dpi = ${env:DPI:-1}
+dpi = ${env:DPI:200}
 
 background = ${colors.background}
 foreground = ${colors.foreground}

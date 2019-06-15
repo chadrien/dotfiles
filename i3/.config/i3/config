@@ -13,21 +13,17 @@
 # exec sh /home/hdec/.screenlayout/auto.sh
 
 # startup stuff
-exec --no-startup-id setxkbmap -option compose:ralt
-
-exec --no-startup-id xss-lock -- i3lock -c '#cccccc'
-
-exec --no-startup-id compton -CGb --no-fading-openclose
-
+# exec --no-startup-id setxkbmap -option compose:ralt
+# exec --no-startup-id xss-lock -- i3lock -c '#cccccc'
+# exec --no-startup-id compton -CGb --no-fading-openclose
 # exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon 
-
 # exec --no-startup-id lightum-indicator
 # exec --no-startup-id pasystray
 # exec --no-startup-id nm-applet
 # exec --no-startup-id emojione-picker
 # exec --no-startup-id blueman-applet
-
-# exec --no-startup-id "xsetroot -solid '#000000'"
+exec --no-startup-id "xsetroot -solid '#000000'"
+# exec --no-startup-id gnome-flashback
 
 set $mod Mod4
 
@@ -50,14 +46,15 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+# bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
 # bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec "rofi -dpi 220 -combi-modi window,drun,run -show combi -modi combi"
+bindsym $mod+d exec "rofi -dpi 200 -combi-modi window,drun,run -show combi -modi combi"
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -155,7 +152,8 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'gnome-session-quit --force --logout'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -217,7 +215,7 @@ bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer
 bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
 
-bindsym $mod+Control+BackSpace exec --no-startup-id xset s activate
+# bindsym $mod+Control+BackSpace exec --no-startup-id xset s activate
 
 bindsym $mod+Shift+s sticky toggle
 
