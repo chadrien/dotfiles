@@ -5,7 +5,7 @@ export DISPLAY=:0
 export EDITOR=nvim
 # export PATH=$HOME/.local/bin:$PATH
 export GOPATH=$HOME/.go
-export ZPLUG_HOME=$HOME/src/zplug
+export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
 
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -38,7 +38,7 @@ alias mux=tmuxinator
 
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 
-zplug themes/norm, from:oh-my-zsh, as:theme, defer:2
+zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 export NVM_DIR="$HOME/.nvm"
 # export NVM_LAZY_LOAD=true
