@@ -7,7 +7,7 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 # Launch bars
-MONITOR=eDP-1 TRAY_POSITION=right DPI=150 polybar bar &
+MONITOR=eDP-1 TRAY_POSITION=right polybar bar &
 MONITOR=HDMI-1 TRAY_POSITION= polybar bar &
 
 echo "Bars launched..."
