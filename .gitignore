@@ -1,2 +1,3 @@
 /nvim/.cache/*
+!/nvim/.cache/nvim/dein/repos/github.com/Shougo/dein.vim
 /vscode/.config/Code/User/*

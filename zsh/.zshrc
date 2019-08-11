@@ -28,6 +28,7 @@ bindkey "^[[1;5D" backward-word
 
 alias reload="source $HOME/.zshrc"
 alias mux=tmuxinator
+alias tmux="tmux -u"
 # alias choco=choco.exe
 # alias pbcopy=pbcopy.exe
 # alias pbpaste=pbpaste.exe
@@ -79,3 +80,5 @@ test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 
 export PATH=$(echo $PATH | sed -e 's#/mnt/c/Program Files/nodejs##')
+
+source $HOME/.aiven.zshrc

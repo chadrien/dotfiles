@@ -9,58 +9,35 @@
 #
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# HiDPI
-# exec sh /home/hdec/.screenlayout/auto.sh
-
-# startup stuff
-# exec --no-startup-id setxkbmap -option compose:ralt
-# exec --no-startup-id xss-lock -- i3lock -c '#cccccc'
-# exec --no-startup-id /usr/lib/notification-daemon-1.0/notification-daemon 
-# exec --no-startup-id lightum-indicator
-# exec --no-startup-id pasystray
-# exec --no-startup-id nm-applet
-# exec --no-startup-id emojione-picker
-# exec --no-startup-id blueman-applet
 exec --no-startup-id "xsetroot -solid '#000000'"
+
+exec --no-startup-id nm-applet
+
+exec --no-startup-id gnome-screensaver
+bindsym $mod+Control+l exec "gnome-screensaver-command --lock"
 
 exec --no-startup-id compton -CGb --no-fading-openclose
 exec --no-startup-id /usr/libexec/gsd-xsettings
-# exec --no-startup-id gnome-flashback
+exec --no-startup-id gnome-flashback
 
 set $mod Mod4
-
-# Font for window titles. Will also be used by the bar unless a different font
-# is used in the bar {} block below.
-# font pango:monospace 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 font pango:DejaVu Sans Mono 8
 
-# Before i3 v4.8, we used to recommend this one as the default:
-# font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
-# The font above is very space-efficient, that is, it looks good, sharp and
-# clear in small sizes. However, its unicode glyph coverage is limited, the old
-# X core fonts rendering does not support right-to-left and this being a bitmap
-# font, it doesn’t scale on retina/hidpi displays.
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-# bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec gnome-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# start dmenu (a program launcher)
-# bindsym $mod+d exec dmenu_run
-bindsym $mod+d exec "rofi -dpi 150 -combi-modi window,drun,run -show combi -modi combi"
-# There also is the (new) i3-dmenu-desktop which only displays applications
-# shipping a .desktop file. It is a wrapper around dmenu, so you need that
-# installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+# start rofi (a program launcher)
+bindsym $mod+d exec "rofi -combi-modi window,drun,run -show combi -modi combi"
+bindsym $mod+Shift+d exec "/home/hdec/.local/bin/rofi-emoji.sh"
 
 # change focus
 bindsym $mod+j focus left
@@ -154,7 +131,6 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-# bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'Do you really want to exit i3?' -b 'Yes, exit i3' 'gnome-session-quit --force --logout'"
 
 # resize window (you can also use the mouse for that)
@@ -187,25 +163,6 @@ bindsym $mod+r mode "resize"
 # See https://github.com/jaagr/polybar/wiki
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-# bar {
-# 	position top
-#       status_command i3status
-# 	tray_output primary
-# }
-
-# see https://faq.i3wm.org/question/3747/enabling-multimedia-keys.1.html#post-id-3759
-# and https://askubuntu.com/questions/97936/terminal-command-to-set-audio-volume
-# and https://askubuntu.com/questions/65764/how-do-i-toggle-sound-with-amixer
-# Pulse Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id amixer -D pulse sset Master 5%+ #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id amixer -D pulse sset Master 5%- #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id amixer -D pulse set Master 1+ toggle # mute sound
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5%
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5%
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle
-
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
@@ -216,8 +173,6 @@ bindsym XF86AudioPlay exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer
 bindsym XF86AudioStop exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Stop"
 bindsym XF86AudioPrev exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Previous"
 bindsym XF86AudioNext exec "dbus-send --print-reply --dest=org.mpris.MediaPlayer2.spotify /org/mpris/MediaPlayer2 org.mpris.MediaPlayer2.Player.Next"
-
-# bindsym $mod+Control+BackSpace exec --no-startup-id xset s activate
 
 bindsym $mod+Shift+s sticky toggle
 
