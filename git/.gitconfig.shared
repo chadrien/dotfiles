@@ -26,6 +26,7 @@
     ap = add -p
     delete-merged-branches = !git branch --merged | grep -v '\\*' | grep -v 'master' | xargs git branch -d
     co-pr = "!f() { [ -z $1 ] && echo \"Usage: git co-pr <pr-number>\" && exit 1; git fetch origin pull/$1/head:pr-$1 2>/dev/null; git checkout pr-$1; }; f"
+    conflicts = diff --name-only --diff-filter=U
 
 [color]
 	diff = auto

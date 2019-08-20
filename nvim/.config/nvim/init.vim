@@ -27,6 +27,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'Shougo/vimproc.vim', {'do' : 'make'}
 Plug 'nathanaelkane/vim-indent-guides'
 
+Plug 'tmux-plugins/vim-tmux-focus-events'
+
 Plug 'prettier/vim-prettier', { 'do': 'npm install' }
 
 Plug 'hashivim/vim-terraform'

@@ -1,11 +1,20 @@
 # zmodload zsh/zprof
 
 # export DOCKER_HOST="tcp://localhost:2375"
-export DISPLAY=:0
+# export DISPLAY=:0
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 export EDITOR=nvim
 # export PATH=$HOME/.local/bin:$PATH
 export GOPATH=$HOME/.go
 export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
+export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
+
+
+sudo sysctl -w net.ipv4.conf.all.route_localnet=1 >/dev/null
+sudo iptables -t nat -I PREROUTING -p tcp -j DNAT --to-destination 127.0.0.1 
+sudo iptables -I INPUT -j ACCEPT
+
+sudo sysctl -w fs.inotify.max_user_watches=524288 >/dev/null
 
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
