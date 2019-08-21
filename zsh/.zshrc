@@ -30,9 +30,8 @@ bindkey "^[[1;5D" backward-word
 alias reload="source $HOME/.zshrc"
 alias mux=tmuxinator
 alias tmux="tmux -u"
-# alias choco=choco.exe
-# alias pbcopy=pbcopy.exe
-# alias pbpaste=pbpaste.exe
+alias pbcopy=pbcopy.exe
+alias pbpaste=pbpaste.exe
 
 #################################
 ############# Zplug #############
@@ -73,13 +72,12 @@ zplug load #--verbose
 
 export PATH=$ZPLUG_BIN:$PATH
 
+export FPATH=$FPATH:$HOME/.local/share/zsh/site-functions
+autoload -Uz compinit
+compinit
+
 #################################
 ########### Zplug end ###########
 #################################
-
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-
-export PATH=$(echo $PATH | sed -e 's#/mnt/c/Program Files/nodejs##')
 
 test -f $HOME/.aiven.zshrc && source $HOME/.aiven.zshrc
