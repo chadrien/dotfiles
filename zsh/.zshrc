@@ -6,7 +6,7 @@ export GOPATH=$HOME/.go
 export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
 export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
 
-test -d $HOME/.wsl2.zshrc && source $HOME/.wsl2.zshrc
+test -f $HOME/.wsl2.zshrc && source $HOME/.wsl2.zshrc
 
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
