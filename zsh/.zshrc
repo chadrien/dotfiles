@@ -4,8 +4,12 @@ export DISPLAY=:0
 export EDITOR=nvim
 export GOPATH=$HOME/.go
 export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
-export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
+export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 
+export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
+function copy-ip {
+  echo $IP_ADDR | pbcopy.exe
+}
 test -f $HOME/.wsl2.zshrc && source $HOME/.wsl2.zshrc
 
 ## History file configuration
