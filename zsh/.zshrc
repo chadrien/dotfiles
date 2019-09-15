@@ -46,7 +46,7 @@ alias pbpaste=pbpaste.exe
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 export NVM_DIR="$HOME/.nvm"
-# export NVM_LAZY_LOAD=true
+export NVM_LAZY_LOAD=true
 zplug lukechilds/zsh-nvm, defer:2
 
 export AUTOENV_FILE_ENTER=.env
