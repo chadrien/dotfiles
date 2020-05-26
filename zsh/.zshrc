@@ -6,10 +6,10 @@ export GOPATH=$HOME/.go
 export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 
-export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
-function copy-ip {
-  echo $IP_ADDR | pbcopy.exe
-}
+#export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
+#function copy-ip {
+#  echo $IP_ADDR | pbcopy.exe
+#}
 test -f $HOME/.wsl2.zshrc && source $HOME/.wsl2.zshrc
 
 ## History file configuration
@@ -48,6 +48,10 @@ zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 zplug lukechilds/zsh-nvm, defer:2
+
+zplug rvm/rvm
+export rvm_path=`zplug info rvm/rvm | sed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" | grep dir | sed -r 's/- dir: |"//g'`
+source $rvm_path/scripts/rvm
 
 export AUTOENV_FILE_ENTER=.env
 zplug Tarrasch/zsh-autoenv, defer:2
