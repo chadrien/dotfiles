@@ -44,9 +44,9 @@
     compactionHeuristic = true
 
 [pager]
-    log = perl /usr/share/git-core/contrib/diff-highlight | less
-    show = perl /usr/share/git-core/contrib/diff-highlight | less
-    diff = perl /usr/share/git-core/contrib/diff-highlight | less
+    log = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+    show = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
+    diff = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight | less
 
 [interactive]
-    diffFilter = perl /usr/share/git-core/contrib/diff-highlight
+    diffFilter = perl /usr/share/doc/git/contrib/diff-highlight/diff-highlight

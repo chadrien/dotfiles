@@ -3,7 +3,6 @@
 export DISPLAY=:0
 export EDITOR=nvim
 export GOPATH=$HOME/.go
-export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
 export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
 
 #export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
@@ -37,17 +36,21 @@ alias tmux="tmux -u"
 alias pbcopy=pbcopy.exe
 alias pbpaste=pbpaste.exe
 
+export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
+[ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
+
+test -f $HOME/.local.zshrc && source $HOME/.local.zshrc
+
 #################################
 ############# Zplug #############
 #################################
 
-[ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
-
+export SPACESHIP_DOCKER_SHOW=false
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
-zplug lukechilds/zsh-nvm, defer:2
+zplug lukechilds/zsh-nvm
 
 zplug rvm/rvm
 export rvm_path=`zplug info rvm/rvm | sed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" | grep dir | sed -r 's/- dir: |"//g'`
@@ -87,5 +90,3 @@ compinit
 #################################
 ########### Zplug end ###########
 #################################
-
-test -f $HOME/.aiven.zshrc && source $HOME/.aiven.zshrc
