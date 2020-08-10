@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # zmodload zsh/zprof
 
 export DISPLAY=:0
@@ -35,6 +42,7 @@ alias mux=tmuxinator
 alias tmux="tmux -u"
 alias pbcopy=pbcopy.exe
 alias pbpaste=pbpaste.exe
+alias ls=colorls
 
 export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
@@ -45,14 +53,17 @@ test -f $HOME/.local.zshrc && source $HOME/.local.zshrc
 ############# Zplug #############
 #################################
 
-export SPACESHIP_DOCKER_SHOW=false
-zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+#export SPACESHIP_DOCKER_SHOW=false
+#export SPACESHIP_BATTERY_SHOW=false
+#zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+
+zplug romkatv/powerlevel10k, as:theme, depth:1
 
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
-zplug lukechilds/zsh-nvm
+zplug lukechilds/zsh-nvm, defer:2
 
-zplug rvm/rvm
+zplug rvm/rvm, defer:2
 export rvm_path=`zplug info rvm/rvm | sed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" | grep dir | sed -r 's/- dir: |"//g'`
 source $rvm_path/scripts/rvm
 
@@ -90,3 +101,8 @@ compinit
 #################################
 ########### Zplug end ###########
 #################################
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+cd .
