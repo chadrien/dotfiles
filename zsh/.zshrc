@@ -5,18 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# zmodload zsh/zprof
-
-export DISPLAY=:0
 export EDITOR=nvim
-export GOPATH=$HOME/.go
-export DISPLAY=$(cat /etc/resolv.conf | grep nameserver | awk '{print $2}'):0
-
-#export IP_ADDR=$(ifconfig eth0 | grep 'inet' | head -1 | awk '{print $2}')
-#function copy-ip {
-#  echo $IP_ADDR | pbcopy.exe
-#}
-test -f $HOME/.wsl2.zshrc && source $HOME/.wsl2.zshrc
 
 ## History file configuration
 [ -z "$HISTFILE" ] && HISTFILE="$HOME/.zsh_history"
@@ -38,11 +27,7 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 alias reload="source $HOME/.zshrc"
-alias mux=tmuxinator
-alias tmux="tmux -u"
-alias pbcopy=pbcopy.exe
-alias pbpaste=pbpaste.exe
-alias ls=colorls
+which colorls >/dev/null && alias ls=colorls
 
 export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
@@ -53,19 +38,11 @@ test -f $HOME/.local.zshrc && source $HOME/.local.zshrc
 ############# Zplug #############
 #################################
 
-#export SPACESHIP_DOCKER_SHOW=false
-#export SPACESHIP_BATTERY_SHOW=false
-#zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
-
 zplug romkatv/powerlevel10k, as:theme, depth:1
 
 export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 zplug lukechilds/zsh-nvm, defer:2
-
-zplug rvm/rvm, defer:2
-export rvm_path=`zplug info rvm/rvm | sed -r "s/[[:cntrl:]]\[[0-9]{1,3}m//g" | grep dir | sed -r 's/- dir: |"//g'`
-source $rvm_path/scripts/rvm
 
 export AUTOENV_FILE_ENTER=.env
 zplug Tarrasch/zsh-autoenv, defer:2
@@ -77,10 +54,6 @@ bindkey "$terminfo[kcuu1]" history-substring-search-up
 bindkey "$terminfo[kcud1]" history-substring-search-down
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
-
-zplug plugins/tmuxinator, from:oh-my-zsh, defer:2
-
-zplug tfutils/tfenv, as:command, use:"bin/*"
 
 # Install plugins if there are plugins that have not been installed
 if ! zplug check --verbose; then
@@ -101,6 +74,27 @@ compinit
 #################################
 ########### Zplug end ###########
 #################################
+
+autoload -U add-zsh-hook
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path=".nvmrc"
+
+  if [ -f "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
+    fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
+}
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
