@@ -78,9 +78,9 @@ compinit
 autoload -U add-zsh-hook
 load-nvmrc() {
   local node_version="$(nvm version)"
-  local nvmrc_path=".nvmrc"
+  local nvmrc_path="$(nvm_find_nvmrc)"
 
-  if [ -f "$nvmrc_path" ]; then
+  if [ -n "$nvmrc_path" ]; then
     local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
 
     if [ "$nvmrc_node_version" = "N/A" ]; then
@@ -94,7 +94,7 @@ load-nvmrc() {
   fi
 }
 add-zsh-hook chpwd load-nvmrc
-load-nvmrc
+nvm >/dev/null 2>&1 && load-nvmrc
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
