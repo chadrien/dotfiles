@@ -1,6 +1,6 @@
 [submodule "vendors/zplug"]
 	path = vendors/zplug
-	url = git://github.com/zplug/zplug.git
+	url = https://github.com/zplug/zplug.git
 [submodule "nvim/.cache/nvim/dein/repos/github.com/Shougo/dein.vim"]
 	path = nvim/.cache/nvim/dein/repos/github.com/Shougo/dein.vim
-	url = git://github.com/Shougo/dein.vim.git
+	url = https://github.com/Shougo/dein.vim.git
