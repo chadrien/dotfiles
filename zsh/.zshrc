@@ -29,7 +29,7 @@ bindkey "^[[1;5D" backward-word
 alias reload="source $HOME/.zshrc"
 which colorls >/dev/null && alias ls=colorls
 
-export ZPLUG_HOME=$HOME/src/dotfiles/vendors/zplug
+export ZPLUG_HOME=$(dirname $(dirname $(readlink -f $HOME/.zshrc)))/vendors/zplug
 [ -f $ZPLUG_HOME/init.zsh ] && source $ZPLUG_HOME/init.zsh
 
 test -f $HOME/.local.zshrc && source $HOME/.local.zshrc
@@ -44,8 +44,8 @@ export NVM_DIR="$HOME/.nvm"
 export NVM_LAZY_LOAD=true
 zplug lukechilds/zsh-nvm, defer:2
 
-export AUTOENV_FILE_ENTER=.env
-zplug Tarrasch/zsh-autoenv, defer:2
+export AUTOENV_ASSUME_YES=true
+zplug hyperupcall/autoenv, defer:2, use:activate.sh
 
 zplug zsh-users/zsh-syntax-highlighting, defer:2
 
